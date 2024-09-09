@@ -11,21 +11,37 @@ The project is divided into three main components:
 
 ## Project Structure
 ├── SQL Scripts
+
 │   ├── source_db_creation.sql
+
 │   ├── landing_db_creation.sql
+
 │   └── staging_db_creation.sql
+
 │
+
 ├── Dummy Data
+
 │   ├── employees.csv
+
 │   ├── doctors.csv
+
 │   ├── nurses.csv
+
 │   ├── departments.csv
+
 │   ├── appointments.csv
+
 │   ├── rooms.csv
+
 │   └── attendance.csv
+
 │
+
 └── SSIS Repos
+
     ├── landing_to_staging.dtsx
+
     └── source_to_landing.dtsx
 
 
