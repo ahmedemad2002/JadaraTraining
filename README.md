@@ -12,29 +12,29 @@ The project is divided into three main components:
 ## Project Structure
 ├── SQL Scripts
 
-   ├── source_db_creation.sql
+│   ├── source_db_creation.sql
 
-   ├── landing_db_creation.sql
+│   ├── landing_db_creation.sql
 
-   └── staging_db_creation.sql
+│   └── staging_db_creation.sql
 
 │
 
 ├── Dummy Data
 
-   ├── employees.csv
+│   ├── employees.csv
 
-   ├── doctors.csv
+│   ├── doctors.csv
 
-   ├── nurses.csv
+│   ├── nurses.csv
 
-   ├── departments.csv
+│   ├── departments.csv
 
-   ├── appointments.csv
+│   ├── appointments.csv
 
-   ├── rooms.csv
+│   ├── rooms.csv
 
-   └── attendance.csv
+│   └── attendance.csv
 
 │
 
