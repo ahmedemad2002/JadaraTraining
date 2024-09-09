@@ -1,5 +1,8 @@
 CREATE DATABASE HMS_Staging;
 GO
+ALTER DATABASE HMS_Staging COLLATE SQL_Latin1_General_CP1_CI_AS;
+GO
+
 USE HMS_Staging;
 GO
 CREATE TABLE Pharmacy_storage (

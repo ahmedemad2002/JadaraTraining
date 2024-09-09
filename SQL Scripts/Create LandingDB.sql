@@ -1,5 +1,7 @@
 CREATE DATABASE HMS_Landing;
 GO
+ALTER DATABASE HMS_Landing COLLATE SQL_Latin1_General_CP1_CI_AS;
+GO
 
 USE HMS_Landing;
 GO
