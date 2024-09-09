@@ -11,8 +11,8 @@
   DTS:LocaleID="3073"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{481265C8-8743-4E0F-93E3-436930359321}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{48872310-4A28-4C55-A70F-6D21783BB2FA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -229,14 +229,6 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[company]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[company]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Recovery_Details]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Recovery_Details"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Recovery_Details]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Recovery_Details]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[end_date]"
                       cachedDataType="dbDate"
                       cachedName="end_date"
@@ -275,12 +267,6 @@
                       length="100"
                       name="company" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Recovery_Details]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Recovery_Details" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
                       dataType="dbDate"
                       name="end_date" />
@@ -293,6 +279,10 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LandingDate]"
                       dataType="dbDate"
                       name="LandingDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Coverage_Percentage]"
+                      dataType="i4"
+                      name="Coverage_Percentage" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -414,17 +404,6 @@
                       name="company"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Recovery_Details]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Recovery_Details]"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Recovery_Details]"
-                      name="Recovery_Details"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[end_date]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
@@ -432,6 +411,15 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[end_date]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[end_date]"
                       name="end_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Coverage_Percentage]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Coverage_Percentage]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Coverage_Percentage]"
+                      name="Coverage_Percentage"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -453,15 +441,13 @@
                       length="100"
                       name="company" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Recovery_Details]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Recovery_Details" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[end_date]"
                       dataType="dbDate"
                       name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Coverage_Percentage]"
+                      dataType="i4"
+                      name="Coverage_Percentage" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -489,17 +475,15 @@
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[company]"
                       name="company" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Recovery_Details]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Recovery_Details]"
-                      name="Recovery_Details" />
-                    <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[end_date]"
                       dataType="dbDate"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[end_date]"
                       name="end_date" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Coverage_Percentage]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Coverage_Percentage]"
+                      name="Coverage_Percentage" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -757,7 +741,7 @@ public class ScriptMain : UserComponent
     public override void Input0_ProcessInputRow(Input0Buffer Row)
     {
         // Concatenate all relevant columns to create a string representation of the row.
-        string inputData = $"{Row.company}{Row.policynumber} {Row.InsuranceID} {Row.RecoveryDetails} {Row.enddate} ";
+        string inputData = $"{Row.company}{Row.policynumber} {Row.InsuranceID} {Row.CoveragePercentage} {Row.enddate} ";
 
         // Generate hashcode using SHA-256
         using (SHA256 sha256 = SHA256.Create())
@@ -843,14 +827,14 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
-    public String RecoveryDetails
+    public DateTime enddate
     {
         get
         {
-            return Buffer.GetString(BufferColumnIndexes[3]);
+            return Buffer.GetDate(BufferColumnIndexes[3]);
         }
     }
-    public bool RecoveryDetails_IsNull
+    public bool enddate_IsNull
     {
         get
         {
@@ -858,14 +842,14 @@ public class Input0Buffer: ScriptBuffer
         }
     }
 
-    public DateTime enddate
+    public Int32 CoveragePercentage
     {
         get
         {
-            return Buffer.GetDate(BufferColumnIndexes[4]);
+            return Buffer.GetInt32(BufferColumnIndexes[4]);
         }
     }
-    public bool enddate_IsNull
+    public bool CoveragePercentage_IsNull
     {
         get
         {
@@ -1018,23 +1002,23 @@ namespace SC_2b497f7b40e4483c8e3109b722a24bef.Properties {
                       dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:Language>msBuild</msb:Language>
     <msb:CodeName>SC_2b497f7b40e4483c8e3109b722a24bef</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_2b497f7b40e4483c8e3109b722a24bef</msb:DisplayName>
-    <msb:ProjectId>{0F343374-0FB6-4261-9996-07929EA8C24D}</msb:ProjectId>
+    <msb:ProjectId>{43C1F172-B75C-4E65-8C4F-CA88D6228B0A}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_2b497f7b40e4483c8e3109b722a24bef.csproj" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
     <msb:File Include="Properties\Settings.settings" />
     <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.resx" />
     <msb:File Include="Properties\Resources.Designer.cs" />
-    <msb:File Include="main.cs" />
-    <msb:File Include="BufferWrapper.cs" />
     <msb:File Include="Properties\Settings.Designer.cs" />
-    <msb:File Include="ComponentWrapper.cs" />
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -1101,9 +1085,10 @@ using System.Runtime.CompilerServices;
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SC_2b497f7b40e4483c8e3109b722a24bef</RootNamespace>
     <AssemblyName>SC_2b497f7b40e4483c8e3109b722a24bef</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1189,112 +1174,112 @@ using System.Runtime.CompilerServices;
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-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
+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
-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
+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
-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
+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
-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
-AIkAGQF1AIEAOQR7AIEAMQQBABkBVQUQAIEAWAeBAIEAnQaBAKEAVQUGAPEAaAaFAKEATgaNAKkA
-VQUGACkBhgCTACkBfQecALkAVQWiANkAVQUGAC4ACwAxAS4AEwA6AS4AGwBZAS4AIwBiAS4AKwCL
-AS4AMwCLAS4AOwCLAS4AQwBiAS4ASwCRAS4AUwCLAS4AWwCoAUMAYwD2AeEAewD2AeMAawD2AakB
-cwBZAckBcwBZARsAAwABAAcADQAIAA8AAAAnABEBAACxAxUBAAD9BBkBAADvAxUBAACOBxkBAAAi
-BBUBAABzBhkBAAAHBBUBAAAlAR0BAADcAxUBAABfABkBAADIAxUBAABFBSIBAADxACcBAACtBiwB
-AgAGAAMAAgAHAAUAAgAIAAcAAgAJAAkAAgAKAAsAAgALAA0AAgAMAA8AAgANABEAAgAOABMAAgAP
-ABUAAQAQABcAAQARABkAAgAbABsAAgAcAB0AAQAdAB0AAgAeAB8ABIAAAAEAAAAAAAAAAAAAAAAA
-CQMAAAQAAAAAAAAAAAAAAKoAOwAAAAAAEAAAAAAAAAAAAAAAswDjBgAAAAAQAAAAAAAAAAAAAACz
-AAAHAAAAAAQAAAAAAAAAAAAAAKoAQgQAAAAAAAAAAAEAAACmBQAAAAAAAABHZXRJbnQzMgBTSEEy
-NTYAZ2V0X1VURjgAPE1vZHVsZT4AZ2V0X0luc3VyYW5jZUlEAElucHV0SUQAbXNjb3JsaWIAQXBw
-ZW5kAGRlZmF1bHRJbnN0YW5jZQBzZXRfSGFzaENvZGUASURpc3Bvc2FibGUAUnVudGltZVR5cGVI
-YW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1lAERhdGVUaW1lAE1pY3Jvc29mdC5TcWxT
-ZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VD
-dWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAERpc3Bvc2UAR2V0RGF0ZQBnZXRfZW5kZGF0
-ZQBDcmVhdGUARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUA
-RGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJy
-b3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJr
-QXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25B
-dHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRp
-b25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0
-dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNv
-bXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQ
-b3N0RXhlY3V0ZQBCeXRlAHZhbHVlAFNDXzJiNDk3ZjdiNDBlNDQ4M2M4ZTMxMDliNzIyYTI0YmVm
-AEVuY29kaW5nAFN5c3RlbS5SdW50aW1lLlZlcnNpb25pbmcAVG9TdHJpbmcAR2V0U3RyaW5nAENv
-bXB1dGVIYXNoAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ18yYjQ5N2Y3YjQwZTQ0ODNjOGUzMTA5
-YjcyMmEyNGJlZi5kbGwAZ2V0X0luc3VyYW5jZUlEX0lzTnVsbABzZXRfSGFzaENvZGVfSXNOdWxs
-AGdldF9lbmRkYXRlX0lzTnVsbABnZXRfcG9saWN5bnVtYmVyX0lzTnVsbABnZXRfUmVjb3ZlcnlE
-ZXRhaWxzX0lzTnVsbABnZXRfY29tcGFueV9Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0A
-SGFzaEFsZ29yaXRobQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9u
-AFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRpb25F
-eGNlcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1
-dE1hcABnZXRfcG9saWN5bnVtYmVyAFN0cmluZ0J1aWxkZXIASW5wdXQwQnVmZmVyAFBpcGVsaW5l
-QnVmZmVyAFNjcmlwdEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBTeXN0
-ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVz
-b3VyY2VzAFNDXzJiNDk3ZjdiNDBlNDQ4M2M4ZTMxMDliNzIyYTI0YmVmLlByb3BlcnRpZXMuUmVz
-b3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ18yYjQ5N2Y3YjQwZTQ0ODNjOGUzMTA5
-YjcyMmEyNGJlZi5Qcm9wZXJ0aWVzAFZhcmlhYmxlcwBHZXRCeXRlcwBCdWZmZXJDb2x1bW5JbmRl
-eGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MARXF1YWxzAGdldF9SZWNvdmVyeURldGFpbHMA
-Q29ubmVjdGlvbnMARm9ybWF0AE9iamVjdABFbmRPZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29t
-cG9uZW50AFBhcmVudENvbXBvbmVudABTY3JpcHRDb21wb25lbnQATWljcm9zb2Z0LlNxbFNlcnZl
-ci5UeFNjcmlwdABNaWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1dDBfUHJvY2Vz
-c0lucHV0AFN5c3RlbS5UZXh0AElucHV0MF9Qcm9jZXNzSW5wdXRSb3cATmV4dFJvdwBTeXN0ZW0u
-U2VjdXJpdHkuQ3J5cHRvZ3JhcGh5AGdldF9Bc3NlbWJseQBnZXRfY29tcGFueQAAAAAnewAwAH0A
-ewAxAH0AIAB7ADIAfQAgAHsAMwB9ACAAewA0AH0AIAAABVgAMgAAgJtJAHMATgB1AGwAbAAgAHAA
-cgBvAHAAZQByAHQAeQAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0AG8AIABGAGEAbABz
-AGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQAaABlACAAYwBvAGwA
-dQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AAA9JAG4AcAB1AHQAIAAwAABxUwBDAF8AMgBiADQAOQA3
-AGYANwBiADQAMABlADQANAA4ADMAYwA4AGUAMwAxADAAOQBiADcAMgAyAGEAMgA0AGIAZQBmAC4A
-UAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAABxUNAXh6ylEq3uFekv2
-9iwABCABAQgDIAABBSABARERBCABAQ4FIAEBEWULBwYOEjkSPR0FCAUGAAIODh0cBAAAEjkEAAAS
-fQUgAR0FDgYgAR0FHQUEIAEODgUgARI9DgMgAA4JIAMBEkUdCBJJAwYSRQMGHQgEIAEICAQgAQII
-BCABDggFIAERTQgFIAIBCBwDIAACByACAg4RgJEFIAEdCAgIAAESgJURgJkFIAASgJ0HIAIBDhKA
-nQi3elxWGTTgiQiJhF3NgIDMkQMGEhQDBhIYAwYSUQMGEl0DBhJhAwYSIAUgAQESDAMgAAgEIAAR
-TQQgAQECCSAEAQgOEkUSSQUgAQESUQQAABJdBAAAEmEFAAEBEmEEAAASIAMAAAEDKAAIAygAAgMo
-AA4EKAARTQQIABJdBAgAEmEECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRo
-cm93cwEIAQACAAAAAAAoAQAjU0NfMmI0OTdmN2I0MGU0NDgzYzhlMzEwOWI3MjJhMjRiZWYAAAUB
-AAAAABYBABFDb3B5cmlnaHQgQCAgMjAyNAAATQEAHC5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43
-LjIBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lFC5ORVQgRnJhbWV3b3JrIDQuNy4yBAEAAAAAtAAA
-AM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwg
-VmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2
-MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQ
-QURQQURQtAAAAMw1AAAAAAAAAAAAAOY1AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADYNQAAAAAA
-AAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADc
+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
+AAQACQUAAAEAVAUAAAEAYgcAAAEA3wYAAAEA3wYAAAEAGgMJAG8FAQARAG8FBgAZAG8FCgApAG8F
+EAAxAG8FEAA5AG8FEABBAG8FEABJAG8FEABRAG8FEABZAG8FEABhAG8FEABpAG8FBgCxAG8FBgDR
+AG8FFQDhAG8FBgChAP4CBgChAAkDBgDxAJUGJwBxAEQBLgD5ABEAMwD5AEsGOAABAXoDPgB5AG8F
+BgAJAWcDRQB5AEQASgCpAGcDUAARASgBBgCBAG8FVACBAFQFXgCBAFQGYgCJAAEAZgCBAEQEawCJ
+AHADcACJADABdQCBAFMEewCBAEsEAQAZAW8FEACBAF4HgQCBAKMGgQChAG8FBgDxAIIGhQChAGgG
+jQCpAG8FBgApAZ0AkwApAYMHnAC5AG8FogDZAG8FBgAuAAsAMQEuABMAOgEuABsAWQEuACMAYgEu
+ACsAiwEuADMAiwEuADsAiwEuAEMAYgEuAEsAkQEuAFMAiwEuAFsAqAFDAGMA8gHhAHsA8gHjAGsA
+8gGpAXMAWQHJAXMAWQEbAAMAAQAHAA0ACAAPAAAAJwARAQAAyAMVAQAAFwUZAQAAJAQVAQAAlAcZ
+AQAAPAQVAQAAPAEdAQAAEQQVAQAAbAARAQAA8wMVAQAAXwAZAQAA3wMVAQAAXwUiAQAACAEnAQAA
+swYsAQIABgADAAIABwAFAAIACAAHAAIACQAJAAIACgALAAIACwANAAIADAAPAAIADQARAAIADgAT
+AAIADwAVAAEAEAAXAAEAEQAZAAIAGwAbAAIAHAAdAAEAHQAdAAIAHgAfAASAAAABAAAAAAAAAAAA
+AAAAACADAAAEAAAAAAAAAAAAAACqADsAAAAAABAAAAAAAAAAAAAAALMA6QYAAAAAEAAAAAAAAAAA
+AAAAswAGBwAAAAAEAAAAAAAAAAAAAACqAFwEAAAAAAAAAAABAAAAwAUAAAAAAAAAR2V0SW50MzIA
+U0hBMjU2AGdldF9VVEY4ADxNb2R1bGU+AGdldF9JbnN1cmFuY2VJRABJbnB1dElEAG1zY29ybGli
+AEFwcGVuZABkZWZhdWx0SW5zdGFuY2UAc2V0X0hhc2hDb2RlAGdldF9Db3ZlcmFnZVBlcmNlbnRh
+Z2UASURpc3Bvc2FibGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXRO
+YW1lAERhdGVUaW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1
+bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNl
+AERpc3Bvc2UAR2V0RGF0ZQBnZXRfZW5kZGF0ZQBDcmVhdGUARWRpdG9yQnJvd3NhYmxlU3RhdGUA
+Q29tcGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBE
+ZWJ1Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxl
+QXR0cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJp
+YnV0ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0
+dHJpYnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0
+dHJpYnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50
+cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGli
+aWxpdHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQBCeXRlAHZhbHVlAFNDXzJiNDk3
+ZjdiNDBlNDQ4M2M4ZTMxMDliNzIyYTI0YmVmAEVuY29kaW5nAFN5c3RlbS5SdW50aW1lLlZlcnNp
+b25pbmcAVG9TdHJpbmcAR2V0U3RyaW5nAENvbXB1dGVIYXNoAFN5c3RlbS5Db21wb25lbnRNb2Rl
+bABTQ18yYjQ5N2Y3YjQwZTQ0ODNjOGUzMTA5YjcyMmEyNGJlZi5kbGwAZ2V0X0luc3VyYW5jZUlE
+X0lzTnVsbABzZXRfSGFzaENvZGVfSXNOdWxsAGdldF9Db3ZlcmFnZVBlcmNlbnRhZ2VfSXNOdWxs
+AGdldF9lbmRkYXRlX0lzTnVsbABnZXRfcG9saWN5bnVtYmVyX0lzTnVsbABnZXRfY29tcGFueV9J
+c051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0ASGFzaEFsZ29yaXRobQByZXNvdXJjZU1hbgBT
+Y3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3Rl
+bS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRpb25FeGNlcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBD
+dWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91dHB1dE1hcABnZXRfcG9saWN5bnVtYmVyAFN0cmlu
+Z0J1aWxkZXIASW5wdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVyAFNjcmlwdEJ1ZmZlcgBnZXRfUmVz
+b3VyY2VNYW5hZ2VyAC5jdG9yAC5jY3RvcgBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRp
+bWUuQ29tcGlsZXJTZXJ2aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNDXzJiNDk3ZjdiNDBlNDQ4M2M4
+ZTMxMDliNzIyYTI0YmVmLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdN
+b2RlcwBTQ18yYjQ5N2Y3YjQwZTQ0ODNjOGUzMTA5YjcyMmEyNGJlZi5Qcm9wZXJ0aWVzAFZhcmlh
+YmxlcwBHZXRCeXRlcwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGlu
+Z3MARXF1YWxzAENvbm5lY3Rpb25zAEZvcm1hdABPYmplY3QARW5kT2ZSb3dzZXQAZ2V0X0RlZmF1
+bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29m
+dC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QASW5w
+dXQwX1Byb2Nlc3NJbnB1dABTeXN0ZW0uVGV4dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRS
+b3cAU3lzdGVtLlNlY3VyaXR5LkNyeXB0b2dyYXBoeQBnZXRfQXNzZW1ibHkAZ2V0X2NvbXBhbnkA
+ACd7ADAAfQB7ADEAfQAgAHsAMgB9ACAAewAzAH0AIAB7ADQAfQAgAAAFWAAyAACAm0kAcwBOAHUA
+bABsACAAcAByAG8AcABlAHIAdAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAg
+AEYAYQBsAHMAZQAuACAAQQBzAHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUA
+IABjAG8AbAB1AG0AbgAgAGkAbgBzAHQAZQBhAGQALgAAD0kAbgBwAHUAdAAgADAAAHFTAEMAXwAy
+AGIANAA5ADcAZgA3AGIANAAwAGUANAA0ADgAMwBjADgAZQAzADEAMAA5AGIANwAyADIAYQAyADQA
+YgBlAGYALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAKJJm1qKA
+5k+/8XYTmdz0IAAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERZQsHBg4SORI9HQUIBQYAAg4OHRwE
+AAASOQQAABJ9BSABHQUOBiABHQUdBQQgAQ4OBSABEj0OAyAADgkgAwESRR0IEkkDBhJFAwYdCAQg
+AQgIBCABAggEIAEOCAUgARFNCAUgAgEIHAMgAAIHIAICDhGAkQUgAR0ICAgAARKAlRGAmQUgABKA
+nQcgAgEOEoCdCLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJRAwYSXQMGEmEDBhIgBSABARIM
+AyAACAQgABFNBCABAQIJIAQBCA4SRRJJBSABARJRBAAAEl0EAAASYQUAAQESYQQAABIgAwAAAQMo
+AAgDKAACAygADgQoABFNBAgAEl0ECAASYQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhj
+ZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ18yYjQ5N2Y3YjQwZTQ0ODNjOGUzMTA5YjcyMmEy
+NGJlZgAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDI0AABJAQAaLk5FVEZyYW1ld29yayxWZXJz
+aW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNwQBAAAA
+ALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwgbXNjb3Js
+aWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdh
+NWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAAAAAAAAAA
+AAAAUEFEUEFEULQAAADQNQAAAAAAAAAAAADqNQAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3DUA
+AAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAA
 AAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABI
 AAAAWEAAAOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAA
 AAC9BO/+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAA
@@ -1321,7 +1306,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAAD4NQAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAAD8NQAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1366,7 +1351,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum140"
-                  typeConverter="NOTBROWSABLE">89</property>
+                  typeConverter="NOTBROWSABLE">9E</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
@@ -1397,17 +1382,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedName="company"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[company]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[Recovery_Details]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Recovery_Details"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Recovery_Details]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[end_date]"
                       cachedDataType="dbDate"
                       cachedName="end_date"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[end_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Script Component.Inputs[Input 0].Columns[Coverage_Percentage]"
+                      cachedDataType="i4"
+                      cachedName="Coverage_Percentage"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Coverage_Percentage]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1529,10 +1512,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="157,42"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="254,63" />
-        <NodeLayout
           Size="177,42"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="288,394" />
@@ -1544,32 +1523,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Size="158,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="301,270" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="254,63" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="332.5,105">
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="378.25,312">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58,62"
+              EndConnector="0,82"
               Start="0,0"
-              End="58,54.5">
+              End="0,74.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27"
-                    Point2="0,31"
-                    Point3="4,31" />
-                  <mssgle:LineSegment
-                    End="54,31" />
-                  <mssgle:CubicBezierSegment
-                    Point1="54,31"
-                    Point2="58,31"
-                    Point3="58,35" />
-                  <mssgle:LineSegment
-                    End="58,54.5" />
+                    End="0,74.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1613,19 +1584,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="378.25,312">
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="332.5,105">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,82"
+              EndConnector="58,62"
               Start="0,0"
-              End="0,74.5">
+              End="58,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,74.5" />
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="54,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54,31"
+                    Point2="58,31"
+                    Point3="58,35" />
+                  <mssgle:LineSegment
+                    End="58,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
