@@ -11,8 +11,8 @@
   DTS:LocaleID="3073"
   DTS:ObjectName="Department"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{0F352150-461C-43EC-A66C-936018EB348E}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{B56AD103-18B3-453D-A596-9382B50FD435}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1606,7 +1606,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Text=""
           ParentId="Package\Data Flow Task"
           FontInfo="{assembly:Null}"
-          Size="29,60"
+          Size="29,40"
           Id="3b241c2a-aec0-47d0-92ae-15ef7ea3ad69"
           TopLeft="944,195" />
       </GraphLayout>

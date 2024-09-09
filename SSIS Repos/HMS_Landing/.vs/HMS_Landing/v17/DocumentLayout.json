@@ -1,24 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{81632A23-9ACC-4D30-B9B4-A727B2E4BB9D}|HMS_Landing\\HMS_Landing.dtproj|C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Department.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{81632A23-9ACC-4D30-B9B4-A727B2E4BB9D}|HMS_Landing\\HMS_Landing.dtproj|solutionrelative:HMS_Landing\\Department.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81632A23-9ACC-4D30-B9B4-A727B2E4BB9D}|HMS_Landing\\HMS_Landing.dtproj|C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Employee.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{81632A23-9ACC-4D30-B9B4-A727B2E4BB9D}|HMS_Landing\\HMS_Landing.dtproj|solutionrelative:HMS_Landing\\Employee.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81632A23-9ACC-4D30-B9B4-A727B2E4BB9D}|HMS_Landing\\HMS_Landing.dtproj|C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Room.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{81632A23-9ACC-4D30-B9B4-A727B2E4BB9D}|HMS_Landing\\HMS_Landing.dtproj|solutionrelative:HMS_Landing\\Room.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81632A23-9ACC-4D30-B9B4-A727B2E4BB9D}|HMS_Landing\\HMS_Landing.dtproj|C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Project.params||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{81632A23-9ACC-4D30-B9B4-A727B2E4BB9D}|HMS_Landing\\HMS_Landing.dtproj|solutionrelative:HMS_Landing\\Project.params||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    }
-  ],
+  "WorkspaceRootPath": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_Landing\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,59 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Project.params [Design]",
-              "DocumentMoniker": "C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Project.params",
-              "RelativeDocumentMoniker": "HMS_Landing\\Project.params",
-              "ToolTip": "C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Project.params [Design]",
-              "RelativeToolTip": "HMS_Landing\\Project.params [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-09-07T23:13:36.591Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Employee.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Employee.dtsx",
-              "RelativeDocumentMoniker": "HMS_Landing\\Employee.dtsx",
-              "ToolTip": "C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Employee.dtsx [Design]",
-              "RelativeToolTip": "HMS_Landing\\Employee.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-07T21:56:51.001Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Room.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Room.dtsx",
-              "RelativeDocumentMoniker": "HMS_Landing\\Room.dtsx",
-              "ToolTip": "C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Room.dtsx [Design]",
-              "RelativeToolTip": "HMS_Landing\\Room.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-07T21:49:38.47Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Department.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Department.dtsx",
-              "RelativeDocumentMoniker": "HMS_Landing\\Department.dtsx",
-              "ToolTip": "C:\\Users\\Ahmed\\source\\repos\\HMS_Landing\\HMS_Landing\\Department.dtsx [Design]",
-              "RelativeToolTip": "HMS_Landing\\Department.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-07T19:08:19.165Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
