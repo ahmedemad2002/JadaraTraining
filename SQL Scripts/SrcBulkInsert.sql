@@ -293,7 +293,7 @@ UNION ALL
 SELECT 5000000 + ROW_NUMBER() OVER(ORDER BY re.Registration_ID) AS Invoice_ID
       ,'Unpaid' AS status
       ,re.Discharge_Date
-      ,(r.price *(DATEDIFF(day, re.Discharge_Date, re.Registration_Date))) AS Amount
+      ,(r.price *(DATEDIFF(day, re.Registration_Date, re.Discharge_Date))) AS Amount
       ,p.Insurance_ID
       ,NULL AS Lab_Test_ID
       ,NULL AS TreatmentID
