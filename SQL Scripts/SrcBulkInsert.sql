@@ -305,3 +305,9 @@ SELECT 5000000 + ROW_NUMBER() OVER(ORDER BY re.Registration_ID) AS Invoice_ID
 FROM Registration re
 LEFT JOIN Patient p ON p.Patient_ID = re.Patient_ID
 LEFT JOIN Room r ON r.Room_ID = re.Room_ID;
+
+GO
+
+UPDATE Invoice
+SET status = 'Paid'
+WHERE date < '2024-09-01';
