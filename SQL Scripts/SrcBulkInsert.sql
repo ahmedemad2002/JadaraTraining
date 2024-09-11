@@ -311,3 +311,11 @@ GO
 UPDATE Invoice
 SET status = 'Paid'
 WHERE date < '2024-09-01';
+
+UPDATE Employee
+SET Role = 'Doctor'
+WHERE Employee_ID <= 50;
+
+UPDATE Employee
+SET Role = 'Nurse'
+WHERE Employee_ID > 50;
