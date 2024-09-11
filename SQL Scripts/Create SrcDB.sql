@@ -99,7 +99,8 @@ CREATE TABLE Registration (
     Discharge_Date DATE,
     Patient_ID INT NOT NULL,
     Room_ID INT,
-    Doctor_ID INT NOT NULL
+    Doctor_ID INT NOT NULL,
+	outPatient BIT
 );
 CREATE TABLE Employee (
     Employee_ID INT PRIMARY KEY,
