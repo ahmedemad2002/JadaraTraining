@@ -11,8 +11,8 @@
   DTS:LocaleID="3073"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{11411254-13F7-4132-A338-390AD53EE9F0}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{1BAAF95D-4C83-40B2-88C4-28FC4AA5AAB2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1124,6 +1124,12 @@ And IsLatest ='Y'
                       cachedName="Doctor_ID"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_ID]"
                       lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Doctor_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[outPatient]"
+                      cachedDataType="bool"
+                      cachedName="outPatient"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[outPatient]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[outPatient]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1184,6 +1190,10 @@ And IsLatest ='Y'
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Doctor_ID]"
                       dataType="i4"
                       name="Doctor_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[outPatient]"
+                      dataType="bool"
+                      name="outPatient" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1346,6 +1356,15 @@ And IsLatest ='Y'
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_ID]"
                       name="Doctor_ID"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[outPatient]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[outPatient]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[outPatient]"
+                      name="outPatient"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1382,6 +1401,10 @@ And IsLatest ='Y'
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Doctor_ID]"
                       dataType="i4"
                       name="Doctor_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[outPatient]"
+                      dataType="bool"
+                      name="outPatient" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1419,6 +1442,11 @@ And IsLatest ='Y'
                       dataType="i4"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Doctor_ID]"
                       name="Doctor_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[outPatient]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[outPatient]"
+                      name="outPatient" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HashCode]"
                       dataType="wstr"
@@ -1632,6 +1660,15 @@ And IsLatest ='Y'
                       lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Doctor_ID]"
                       name="Doctor_ID"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[outPatient]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[outPatient]"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[outPatient]"
+                      name="outPatient"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1692,6 +1729,10 @@ And IsLatest ='Y'
                       refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Doctor_ID]"
                       dataType="i4"
                       name="Doctor_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[outPatient]"
+                      dataType="bool"
+                      name="outPatient" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1735,6 +1776,11 @@ And IsLatest ='Y'
                       dataType="i4"
                       lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Doctor_ID]"
                       name="Doctor_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[outPatient]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[outPatient]"
+                      name="outPatient" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
@@ -1904,6 +1950,19 @@ And IsLatest ='Y'
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[outPatient]"
+                      cachedDataType="bool"
+                      cachedName="outPatient"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[outPatient]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[outPatient]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Status]"
                       cachedDataType="wstr"
                       cachedLength="1"
@@ -2045,6 +2104,19 @@ And IsLatest ='Y'
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[outPatient]"
+                      cachedDataType="bool"
+                      cachedName="outPatient"
+                      lineageId="Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[outPatient]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[outPatient]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[Status]"
                       cachedDataType="wstr"
                       cachedLength="1"
@@ -2130,6 +2202,11 @@ And IsLatest ='Y'
                       lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Doctor_ID]"
                       name="Doctor_ID" />
                     <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[outPatient]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[outPatient]"
+                      name="outPatient" />
+                    <outputColumn
                       refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Status]"
                       dataType="wstr"
                       length="1"
@@ -2154,6 +2231,159 @@ And IsLatest ='Y'
               name="Union All 1"
               version="1">
               <inputs>
+                <input
+                  refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[HashCode]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="HashCode"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HashCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[HashCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[LandingDate]"
+                      cachedDataType="dbDate"
+                      cachedName="LandingDate"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[LandingDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[LandingDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[Registration_ID]"
+                      cachedDataType="i4"
+                      cachedName="Registration_ID"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Registration_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Registration_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[Registration_Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Registration_Date"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Registration_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Registration_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[Discharge_Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Discharge_Date"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Discharge_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Discharge_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[Patient_ID]"
+                      cachedDataType="i4"
+                      cachedName="Patient_ID"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Patient_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Patient_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[Room_ID]"
+                      cachedDataType="i4"
+                      cachedName="Room_ID"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Room_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Room_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[Doctor_ID]"
+                      cachedDataType="i4"
+                      cachedName="Doctor_ID"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Doctor_ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[outPatient]"
+                      cachedDataType="bool"
+                      cachedName="outPatient"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[outPatient]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[outPatient]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[Status]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Status"
+                      lineageId="Package\Data Flow Task\Updated Record.Outputs[Derived Column Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1].Columns[isLatest]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="isLatest"
+                      lineageId="Package\Data Flow Task\Updated Record.Outputs[Derived Column Output].Columns[isLatest]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[isLatest]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
                 <input
                   refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 2]"
                   hasSideEffects="true"
@@ -2265,6 +2495,19 @@ And IsLatest ='Y'
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 2].Columns[outPatient]"
+                      cachedDataType="bool"
+                      cachedName="outPatient"
+                      lineageId="Package\Data Flow Task\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[outPatient]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[outPatient]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 2].Columns[Status]"
                       cachedDataType="wstr"
                       cachedLength="1"
@@ -2297,150 +2540,9 @@ And IsLatest ='Y'
                 </input>
                 <input
                   refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3]"
-                  hasSideEffects="true"
-                  name="Union All Input 3">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[HashCode]"
-                      cachedDataType="wstr"
-                      cachedLength="1000"
-                      cachedName="HashCode"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HashCode]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[HashCode]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[LandingDate]"
-                      cachedDataType="dbDate"
-                      cachedName="LandingDate"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[LandingDate]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[LandingDate]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[Registration_ID]"
-                      cachedDataType="i4"
-                      cachedName="Registration_ID"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Registration_ID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Registration_ID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[Registration_Date]"
-                      cachedDataType="dbDate"
-                      cachedName="Registration_Date"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Registration_Date]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Registration_Date]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[Discharge_Date]"
-                      cachedDataType="dbDate"
-                      cachedName="Discharge_Date"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Discharge_Date]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Discharge_Date]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[Patient_ID]"
-                      cachedDataType="i4"
-                      cachedName="Patient_ID"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Patient_ID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Patient_ID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[Room_ID]"
-                      cachedDataType="i4"
-                      cachedName="Room_ID"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Room_ID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Room_ID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[Doctor_ID]"
-                      cachedDataType="i4"
-                      cachedName="Doctor_ID"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doctor_ID]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Doctor_ID]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[Status]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="Status"
-                      lineageId="Package\Data Flow Task\Updated Record.Outputs[Derived Column Output].Columns[Status]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Status]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3].Columns[isLatest]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="isLatest"
-                      lineageId="Package\Data Flow Task\Updated Record.Outputs[Derived Column Output].Columns[isLatest]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[isLatest]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1]"
                   dangling="true"
                   hasSideEffects="true"
-                  name="Union All Input 1">
+                  name="Union All Input 3">
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -2490,6 +2592,11 @@ And IsLatest ='Y'
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Doctor_ID]"
                       name="Doctor_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[outPatient]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[outPatient]"
+                      name="outPatient" />
                     <outputColumn
                       refId="Package\Data Flow Task\Union All 1.Outputs[Union All Output 1].Columns[Status]"
                       dataType="wstr"
@@ -2618,14 +2725,14 @@ And IsLatest ='Y'
               startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Updated Record.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output2]"
               endId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 2]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Deleted Record.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output2]"
-              endId="Package\Data Flow Task\Union All 1.Inputs[Union All Input 3]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Updated Record.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output3]"
               endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
@@ -2711,20 +2818,16 @@ And IsLatest ='Y'
           TopLeft="319.4897959705,320.369747150271" />
         <NodeLayout
           Size="158.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Source 1"
-          TopLeft="497,93.9999992549419" />
-        <NodeLayout
-          Size="158.4,41.6"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="301.31746012655,896.222221401198" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Source 1"
+          TopLeft="497,93.9999992549419" />
         <NodeLayout
           Size="156.8,41.6"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="118.000001788139,60" />
-        <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\Data Flow Task\Updated Record"
-          TopLeft="96,326.999999254942" />
         <NodeLayout
           Size="127.2,41.6"
           Id="Package\Data Flow Task\ID Lookup"
@@ -2745,6 +2848,10 @@ And IsLatest ='Y'
           Size="164.8,41.6"
           Id="Package\Data Flow Task\OLE DB Command"
           TopLeft="420.918110182897,473.213840280879" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Data Flow Task\Updated Record"
+          TopLeft="96,326.999999254942" />
         <NodeLayout
           Size="169.6,41.6"
           Id="Package\Data Flow Task\HashCode Lookup"
@@ -3000,67 +3107,33 @@ And IsLatest ='Y'
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Data Flow Task\Union All 1"
-          TopLeft="155.102041146498,434.285714090371" />
+          TopLeft="151.428571750923,460.894117496913" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="585.600000059605,352.599999240041">
+          TopLeft="172.8,368.599999254942">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-345.43129224644,81.6857148503304"
+              EndConnector="43.4285717509231,92.2941182419709"
               Start="0,0"
-              End="-345.43129224644,74.1857148503304">
+              End="43.4285717509231,84.7941182419709">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.4137285576349" />
+                    End="0,42.1470591209855" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,44.4137285576349"
-                    Point2="0,48.4137285576349"
-                    Point3="-4,48.4137285576349" />
+                    Point1="0,42.1470591209855"
+                    Point2="0,46.1470591209855"
+                    Point3="4,46.1470591209855" />
                   <mssgle:LineSegment
-                    End="-341.43129224644,48.4137285576349" />
+                    End="39.4285717509231,46.1470591209855" />
                   <mssgle:CubicBezierSegment
-                    Point1="-341.43129224644,48.4137285576349"
-                    Point2="-345.43129224644,48.4137285576349"
-                    Point3="-345.43129224644,52.4137285576349" />
+                    Point1="39.4285717509231,46.1470591209855"
+                    Point2="43.4285717509231,46.1470591209855"
+                    Point3="43.4285717509231,50.1470591209855" />
                   <mssgle:LineSegment
-                    End="-345.43129224644,74.1857148503304" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="284.702041146498,455.085714090371">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="136.216069036399,38.9281261905076"
-              Start="0,0"
-              End="128.716069036399,38.9281261905076">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="64.1080345181995,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="64.1080345181995,0"
-                    Point2="68.1080345181995,0"
-                    Point3="68.1080345181995,4" />
-                  <mssgle:LineSegment
-                    End="68.1080345181995,34.9281261905076" />
-                  <mssgle:CubicBezierSegment
-                    Point1="68.1080345181995,34.9281261905076"
-                    Point2="68.1080345181995,38.9281261905076"
-                    Point3="72.1080345181995,38.9281261905076" />
-                  <mssgle:LineSegment
-                    End="128.716069036399,38.9281261905076" />
+                    End="43.4285717509231,84.7941182419709" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3071,30 +3144,64 @@ And IsLatest ='Y'
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output2]"
-          TopLeft="172.8,368.599999254942">
+          TopLeft="585.600000059605,352.599999240041">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="26.8353744798314,65.6857148354295"
+              EndConnector="-349.104761642015,108.294118256872"
               Start="0,0"
-              End="26.8353744798314,58.1857148354295">
+              End="-349.104761642015,100.794118256872">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.930801719535" />
+                    End="0,60.1840749668777" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,34.930801719535"
-                    Point2="0,38.930801719535"
-                    Point3="4,38.930801719535" />
+                    Point1="0,60.1840749668777"
+                    Point2="0,64.1840749668777"
+                    Point3="-4,64.1840749668777" />
                   <mssgle:LineSegment
-                    End="22.8353744798314,38.930801719535" />
+                    End="-345.104761642015,64.1840749668777" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.8353744798314,38.930801719535"
-                    Point2="26.8353744798314,38.930801719535"
-                    Point3="26.8353744798314,42.930801719535" />
+                    Point1="-345.104761642015,64.1840749668777"
+                    Point2="-349.104761642015,64.1840749668777"
+                    Point3="-349.104761642015,68.1840749668777" />
                   <mssgle:LineSegment
-                    End="26.8353744798314,58.1857148354295" />
+                    End="-349.104761642015,100.794118256872" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="281.028571750923,481.694117496913">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="139.889538431974,12.3197227839661"
+              Start="0,0"
+              End="132.389538431974,12.3197227839661">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="65.944769215987,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.944769215987,0"
+                    Point2="69.944769215987,0"
+                    Point3="69.944769215987,4" />
+                  <mssgle:LineSegment
+                    End="69.944769215987,8.31972278396609" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69.944769215987,8.31972278396609"
+                    Point2="69.944769215987,12.3197227839661"
+                    Point3="73.944769215987,12.3197227839661" />
+                  <mssgle:LineSegment
+                    End="132.389538431974,12.3197227839661" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3106,33 +3213,33 @@ And IsLatest ='Y'
         <NodeLayout
           Size="120,41.6"
           Id="Package\Data Flow Task\Union All"
-          TopLeft="316.326531285621,601.109243458088" />
+          TopLeft="304.642857791362,590.541176382109" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output3]"
           TopLeft="387.0897959705,361.969747150271">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-29.4299313515456,239.139496307817"
+              EndConnector="-41.1136048458048,228.571429231838"
               Start="0,0"
-              End="-29.4299313515456,231.639496307817">
+              End="-41.1136048458048,221.071429231838">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,137.595754392786" />
+                    End="0,131.338346255694" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,137.595754392786"
-                    Point2="0,141.595754392786"
-                    Point3="-4,141.595754392786" />
+                    Point1="0,131.338346255694"
+                    Point2="0,135.338346255694"
+                    Point3="-4,135.338346255694" />
                   <mssgle:LineSegment
-                    End="-25.4299313515456,141.595754392786" />
+                    End="-37.1136048458048,135.338346255694" />
                   <mssgle:CubicBezierSegment
-                    Point1="-25.4299313515456,141.595754392786"
-                    Point2="-29.4299313515456,141.595754392786"
-                    Point3="-29.4299313515456,145.595754392786" />
+                    Point1="-37.1136048458048,135.338346255694"
+                    Point2="-41.1136048458048,135.338346255694"
+                    Point3="-41.1136048458048,139.338346255694" />
                   <mssgle:LineSegment
-                    End="-29.4299313515456,231.639496307817" />
+                    End="-41.1136048458048,221.071429231838" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3147,26 +3254,26 @@ And IsLatest ='Y'
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-108.324912230609,86.2954031772091"
+              EndConnector="-120.008585724869,75.7273361012303"
               Start="0,0"
-              End="-108.324912230609,78.7954031772091">
+              End="-120.008585724869,68.2273361012303">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.095962407558" />
+                    End="0,40.8385542704653" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,47.095962407558"
-                    Point2="0,51.095962407558"
-                    Point3="-4,51.095962407558" />
+                    Point1="0,40.8385542704653"
+                    Point2="0,44.8385542704653"
+                    Point3="-4,44.8385542704653" />
                   <mssgle:LineSegment
-                    End="-104.324912230609,51.095962407558" />
+                    End="-116.008585724869,44.8385542704653" />
                   <mssgle:CubicBezierSegment
-                    Point1="-104.324912230609,51.095962407558"
-                    Point2="-108.324912230609,51.095962407558"
-                    Point3="-108.324912230609,55.095962407558" />
+                    Point1="-116.008585724869,44.8385542704653"
+                    Point2="-120.008585724869,44.8385542704653"
+                    Point3="-120.008585724869,48.8385542704653" />
                   <mssgle:LineSegment
-                    End="-108.324912230609,78.7954031772091" />
+                    End="-120.008585724869,68.2273361012303" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3177,30 +3284,30 @@ And IsLatest ='Y'
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Union All Output 11]"
-          TopLeft="376.326531285621,642.709243458088">
+          TopLeft="364.642857791362,632.141176382109">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="119.422674864227,129.983566225325"
+              EndConnector="131.106348358486,140.551633301304"
               Start="0,0"
-              End="119.422674864227,122.483566225325">
+              End="131.106348358486,133.051633301304">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.9917831126624" />
+                    End="0,66.2758166506518" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,60.9917831126624"
-                    Point2="0,64.9917831126624"
-                    Point3="4,64.9917831126624" />
+                    Point1="0,66.2758166506518"
+                    Point2="0,70.2758166506518"
+                    Point3="4,70.2758166506518" />
                   <mssgle:LineSegment
-                    End="115.422674864227,64.9917831126624" />
+                    End="127.106348358486,70.2758166506518" />
                   <mssgle:CubicBezierSegment
-                    Point1="115.422674864227,64.9917831126624"
-                    Point2="119.422674864227,64.9917831126624"
-                    Point3="119.422674864227,68.9917831126624" />
+                    Point1="127.106348358486,70.2758166506518"
+                    Point2="131.106348358486,70.2758166506518"
+                    Point3="131.106348358486,74.2758166506518" />
                   <mssgle:LineSegment
-                    End="119.422674864227,122.483566225325" />
+                    End="131.106348358486,133.051633301304" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3239,7 +3346,7 @@ And IsLatest ='Y'
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3249,7 +3356,7 @@ And IsLatest ='Y'
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3275,7 +3382,7 @@ And IsLatest ='Y'
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3285,7 +3392,7 @@ And IsLatest ='Y'
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

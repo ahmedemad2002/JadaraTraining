@@ -11,8 +11,8 @@
   DTS:LocaleID="3073"
   DTS:ObjectName="Insurance"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{38D3F9BE-5DA6-40D7-A922-37216ED02818}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{F41040A0-0992-4940-8DE7-339D2BE80E04}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1492,8 +1492,8 @@ And IsLatest ='Y'
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-DER8I73.HMS_Landing]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-DER8I73.HMS_Landing]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-DER8I73.HMS_Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-DER8I73.HMS_Staging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
