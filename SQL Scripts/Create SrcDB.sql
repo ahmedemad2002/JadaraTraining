@@ -126,7 +126,6 @@ CREATE TABLE Doctor (
     Doctor_ID INT PRIMARY KEY,
     position VARCHAR(100),
 	appointment_price DECIMAL(10, 2),
-    DepartmentID INT,
     Medical_License_Number VARCHAR(50),
 );
 CREATE TABLE Nurse (
@@ -189,9 +188,6 @@ REFERENCES [dbo].[Operation] ([Operation_ID])
 GO
 
 --Doctor FKs
-ALTER TABLE [dbo].[Doctor] ADD CONSTRAINT [FK__Doctor__Departme__5535A963] FOREIGN KEY([DepartmentID])
-REFERENCES [dbo].[Department] ([DepartmentID])
-GO
 ALTER TABLE [dbo].[Doctor] ADD CONSTRAINT [FK__Doctor__Employee__5441852A] FOREIGN KEY([Doctor_ID])
 REFERENCES [dbo].[Employee] ([Employee_ID])
 GO

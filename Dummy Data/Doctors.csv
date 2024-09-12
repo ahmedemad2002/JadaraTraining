@@ -1,51 +1,51 @@
-Doctor_ID,position,appointment_price,DepartmentID,Medical_License_Number
-1,Surgeon,291,7,LQRz-82753370
-2,Dermatologist,427,7,FwLG-27925624
-3,Cardiologist,346,7,TluE-54987975
-4,Dermatologist,486,2,dpEY-47255944
-5,Cardiologist,346,1,ACdQ-25018617
-6,Pediatrician,310,7,clFV-20116734
-7,General Practitioner,318,3,bvKp-94918483
-8,Surgeon,295,9,XWdO-09937354
-9,Dermatologist,256,5,ClSE-38777802
-10,Pediatrician,210,2,IWqV-37742182
-11,Cardiologist,483,9,qgaY-46672677
-12,Pediatrician,332,4,VcgP-14278313
-13,General Practitioner,458,3,mDWW-78092524
-14,Pediatrician,106,1,usvi-02906813
-15,Cardiologist,472,4,HTPW-21880816
-16,Cardiologist,103,1,Wmvm-78806479
-17,Dermatologist,310,5,Ruyw-60481554
-18,Surgeon,354,9,nEgU-23325196
-19,Cardiologist,226,9,tEiw-91796546
-20,General Practitioner,418,3,EzKa-75075579
-21,General Practitioner,434,3,WYSX-07679707
-22,General Practitioner,162,5,QGNT-21714150
-23,Pediatrician,482,3,voFL-55885359
-24,General Practitioner,478,7,ksmw-41143157
-25,General Practitioner,450,10,VEhw-79954441
-26,Dermatologist,357,9,YpCX-54408605
-27,General Practitioner,178,6,vtcU-46645824
-28,Surgeon,411,1,RrTX-42630535
-29,Pediatrician,209,7,HOIM-73118750
-30,Surgeon,499,6,nXtw-60661963
-31,Dermatologist,483,7,sSdf-78075266
-32,Dermatologist,182,2,ZkMf-96258760
-33,Surgeon,206,10,YsZA-07058280
-34,General Practitioner,385,1,gCFd-69039280
-35,Surgeon,140,1,lEGX-69251907
-36,Cardiologist,153,1,mJkm-06719474
-37,General Practitioner,218,8,BVLy-85288441
-38,Cardiologist,172,1,vgmG-01367148
-39,General Practitioner,151,1,jpHn-67665077
-40,Pediatrician,179,4,gylx-21209625
-41,General Practitioner,374,2,mJQO-47853781
-42,General Practitioner,207,10,QDxW-35494448
-43,Surgeon,274,10,rGGL-88434933
-44,General Practitioner,448,7,peZq-33368856
-45,General Practitioner,256,6,jueq-12081118
-46,Dermatologist,150,6,sTpG-84649305
-47,Pediatrician,478,4,sLrU-75182750
-48,General Practitioner,478,4,Pzoj-97881571
-49,Pediatrician,409,2,PfHI-83894977
-50,Pediatrician,445,10,Nclv-98660990
+Doctor_ID,position,appointment_price,Medical_License_Number
+1,Surgeon,291,LQRz-82753370
+2,Dermatologist,427,FwLG-27925624
+3,Cardiologist,346,TluE-54987975
+4,Dermatologist,486,dpEY-47255944
+5,Cardiologist,346,ACdQ-25018617
+6,Pediatrician,310,clFV-20116734
+7,General Practitioner,318,bvKp-94918483
+8,Surgeon,295,XWdO-09937354
+9,Dermatologist,256,ClSE-38777802
+10,Pediatrician,210,IWqV-37742182
+11,Cardiologist,483,qgaY-46672677
+12,Pediatrician,332,VcgP-14278313
+13,General Practitioner,458,mDWW-78092524
+14,Pediatrician,106,usvi-02906813
+15,Cardiologist,472,HTPW-21880816
+16,Cardiologist,103,Wmvm-78806479
+17,Dermatologist,310,Ruyw-60481554
+18,Surgeon,354,nEgU-23325196
+19,Cardiologist,226,tEiw-91796546
+20,General Practitioner,418,EzKa-75075579
+21,General Practitioner,434,WYSX-07679707
+22,General Practitioner,162,QGNT-21714150
+23,Pediatrician,482,voFL-55885359
+24,General Practitioner,478,ksmw-41143157
+25,General Practitioner,450,VEhw-79954441
+26,Dermatologist,357,YpCX-54408605
+27,General Practitioner,178,vtcU-46645824
+28,Surgeon,411,RrTX-42630535
+29,Pediatrician,209,HOIM-73118750
+30,Surgeon,499,nXtw-60661963
+31,Dermatologist,483,sSdf-78075266
+32,Dermatologist,182,ZkMf-96258760
+33,Surgeon,206,YsZA-07058280
+34,General Practitioner,385,gCFd-69039280
+35,Surgeon,140,lEGX-69251907
+36,Cardiologist,153,mJkm-06719474
+37,General Practitioner,218,BVLy-85288441
+38,Cardiologist,172,vgmG-01367148
+39,General Practitioner,151,jpHn-67665077
+40,Pediatrician,179,gylx-21209625
+41,General Practitioner,374,mJQO-47853781
+42,General Practitioner,207,QDxW-35494448
+43,Surgeon,274,rGGL-88434933
+44,General Practitioner,448,peZq-33368856
+45,General Practitioner,256,jueq-12081118
+46,Dermatologist,150,sTpG-84649305
+47,Pediatrician,478,sLrU-75182750
+48,General Practitioner,478,Pzoj-97881571
+49,Pediatrician,409,PfHI-83894977
+50,Pediatrician,445,Nclv-98660990
