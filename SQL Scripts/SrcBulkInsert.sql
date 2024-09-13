@@ -258,7 +258,7 @@ UNION ALL
 -- Insert for Operation_ID being non-null
 SELECT 2000000 + ROW_NUMBER() OVER(ORDER BY o.Operation_ID) AS Invoice_ID
       ,'Unpaid' AS status
-      ,o.start_time
+      ,o.end_time
       ,o.price AS Amount
       ,p.Insurance_ID
       ,Null AS Lab_Test_ID
@@ -270,6 +270,7 @@ SELECT 2000000 + ROW_NUMBER() OVER(ORDER BY o.Operation_ID) AS Invoice_ID
       ,o.Operation_ID AS Operation_ID
 FROM operation o
 LEFT JOIN Patient p ON p.Patient_ID = o.Patient_ID
+WHERE O.status like 'Completed'
 
 
 UNION ALL
