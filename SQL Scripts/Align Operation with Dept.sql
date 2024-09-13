@@ -17,9 +17,7 @@ FROM (VALUES
     ('Radiation Therapy'),
     ('Targeted Therapy'),
     ('Immunotherapy'),
-    ('Bone Marrow Biopsy'),
-    ('Hormone Therapy'),
-    ('Palliative Care Procedures')
+    ('Bone Marrow Biopsy')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT1);
@@ -41,9 +39,7 @@ FROM (VALUES
     ('Autopsy'),
     ('Histopathology Examination'),
     ('Immunohistochemistry'),
-    ('Molecular Pathology Testing'),
-    ('Pap Smear'),
-    ('Frozen Section Analysis')
+    ('Molecular Pathology Testing')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT2);
@@ -65,10 +61,7 @@ FROM (VALUES
     ('Nephrectomy'),
     ('Ureteroscopy'),
     ('Lithotripsy'),
-    ('Bladder Augmentation'),
-    ('Circumcision'),
-    ('Vasectomy'),
-    ('Urethral Reconstruction')
+    ('Bladder Augmentation')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT3);
@@ -90,10 +83,7 @@ FROM (VALUES
     ('Spinal Decompression'),
     ('Pacemaker Implantation'),
     ('Joint Replacement'),
-    ('Osteoporosis Management Procedures'),
-    ('Dementia-related Surgical Interventions'),
-    ('Bariatric Surgery'),
-    ('Pain Management Injections')
+    ('Osteoporosis Management Procedures')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT4);
@@ -115,10 +105,7 @@ FROM (VALUES
     ('Hernia Repair'),
     ('Pediatric Orthopedic Surgery'),
     ('Cleft Lip and Palate Repair'),
-    ('Pediatric Endoscopy'),
-    ('Inguinal Hernia Surgery'),
-    ('G-tube Placement'),
-    ('Appendectomy')
+    ('Pediatric Endoscopy')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT5);
@@ -140,10 +127,7 @@ FROM (VALUES
     ('Ovarian Cystectomy'),
     ('Endometrial Biopsy'),
     ('Laparoscopic Surgery'),
-    ('Pelvic Floor Repair'),
-    ('Dilation and Curettage (D&C)'),
-    ('Tubal Ligation'),
-    ('Vaginal Birth After Cesarean (VBAC) Management')
+    ('Pelvic Floor Repair')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT6);
@@ -165,10 +149,7 @@ FROM (VALUES
     ('Hip Fracture Repair'),
     ('Spinal Fusion'),
     ('Carpal Tunnel Release'),
-    ('Rotator Cuff Repair'),
-    ('Ankle Arthroscopy'),
-    ('Elbow Decompression'),
-    ('Osteotomy')
+    ('Rotator Cuff Repair')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT7);
@@ -190,10 +171,7 @@ FROM (VALUES
     ('Chest Tube Insertion'),
     ('Laceration Repair'),
     ('Intubation'),
-    ('Central Line Placement'),
-    ('Emergency Thoracotomy'),
-    ('Reduction of Fractures'),
-    ('Abdomen Ultrasound')
+    ('Central Line Placement')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT8);
@@ -215,10 +193,7 @@ FROM (VALUES
     ('Central Venous Catheter Placement'),
     ('Cardioversion'),
     ('Paracentesis'),
-    ('Thoracentesis'),
-    ('Biopsy of Internal Organs'),
-    ('Diagnostic Imaging Procedures'),
-    ('Pacemaker Insertion')
+    ('Thoracentesis')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT9);
@@ -240,10 +215,7 @@ FROM (VALUES
     ('Electrophysiological Study'),
     ('Implantable Cardioverter Defibrillator (ICD) Insertion'),
     ('Stent Placement'),
-    ('Echocardiogram'),
-    ('Cardiac Catheterization'),
-    ('Heart Valve Repair or Replacement'),
-    ('Stress Test')
+    ('Echocardiogram')
 ) AS Operations(OperationType)
 ORDER BY NEWID())
 WHERE Operation_ID IN (SELECT * FROM OPERATIONSDEPT10);
