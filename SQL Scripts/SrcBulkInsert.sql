@@ -207,6 +207,29 @@ BULK INSERT Treatment
         FIRSTROW = 2
     );
 ');
+GO
+
+ -- Set some patients as overlapping (outPatient and inPatient)
+UPDATE Patient
+SET inpatient_flag=1, outpatient_flag=1
+--SELECT * FROM Patient
+WHERE Patient_ID IN (
+	SELECT distinct patient_id
+	FROM Registration
+	WHERE outPatient = 1);
+GO
+
+ -- Set the VisitDate as Null if the the outpatient_flag is 0
+UPDATE Patient
+SET visitDate = NULL, prescription=NULL
+WHERE outpatient_flag =0;
+GO
+ -- Set the admission values to NULL if the inpatient_flag is 0
+UPDATE Patient
+SET admissionReason = NULL, admissionDate=NULL, dischargeDate=NULL
+WHERE inpatient_flag =0;
+GO
+
 
  --Invoice
  -- Insert for Appointment_ID being non-null
