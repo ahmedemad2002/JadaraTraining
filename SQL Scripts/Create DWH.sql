@@ -2,7 +2,8 @@ CREATE DATABASE HMS_DWH;
 GO
 USE HMS_DWH;
 GO
-
+ALTER DATABASE HMS_DWH COLLATE SQL_Latin1_General_CP1_CI_AS;
+GO
 -- Create the schema if it does not exist
 CREATE SCHEMA Shared;
 GO
