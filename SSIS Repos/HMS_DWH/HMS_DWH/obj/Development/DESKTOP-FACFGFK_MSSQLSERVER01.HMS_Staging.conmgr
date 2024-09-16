@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-FACFGFK_MSSQLSERVER01.HMS_Staging"
+  DTS:DTSID="{51FB440F-5DC9-4DFB-AB0E-7C4BEB0AA949}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-FACFGFK\MSSQLSERVER01;Initial Catalog=HMS_Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-HMS_DWH-{51FB440F-5DC9-4DFB-AB0E-7C4BEB0AA949}DESKTOP-FACFGFK\MSSQLSERVER01.HMS_Staging;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
