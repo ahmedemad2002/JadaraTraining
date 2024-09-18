@@ -8,8 +8,8 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
-        <ServerName>DESKTOP-FACFGFK\MSSQLSERVER01</ServerName>
-        <PathOnServer>/SSISDB/Landing/HMS_Landing</PathOnServer>
+        <ServerName>.</ServerName>
+        <PathOnServer>/SSISDB/Landing DB Packages/HMS_Landing</PathOnServer>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
