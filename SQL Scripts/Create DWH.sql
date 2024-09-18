@@ -1,8 +1,8 @@
-CREATE DATABASE HMS_DWH11;
+CREATE DATABASE HMS_DWH7;
 GO
-USE HMS_DWH11;
+USE HMS_DWH7;
 GO
-ALTER DATABASE HMS_DWH COLLATE SQL_Latin1_General_CP1_CI_AS;
+ALTER DATABASE HMS_DWH7 COLLATE SQL_Latin1_General_CP1_CI_AS;
 GO
 -- Create the schema if it does not exist
 CREATE SCHEMA Shared;
@@ -19,17 +19,17 @@ GO
 
 -- Create the FactOperation table within the Op schema with just the surrogate key
 CREATE TABLE Op.FactOperation (
-    Operation_Surrogate_ID INT IDENTITY(1,1) PRIMARY KEY
+    OperationBK INT IDENTITY(1,1) PRIMARY KEY
 );
 GO
-ALTER TABLE Op.FactOperation ADD Employee_ID INT;
-ALTER TABLE Op.FactOperation ADD Patient_ID INT;
-ALTER TABLE Op.FactOperation ADD Operation_ID INT;
-ALTER TABLE Op.FactOperation ADD Department_ID INT;
+ALTER TABLE Op.FactOperation ADD OperationID INT;
+ALTER TABLE Op.FactOperation ADD EmployeeID INT;
+ALTER TABLE Op.FactOperation ADD PatientID INT;
+ALTER TABLE Op.FactOperation ADD DepartmentID INT;
 ALTER TABLE Op.FactOperation ADD DateID BIGINT;
-ALTER TABLE Op.FactOperation ADD Duration_Of_Operation DECIMAL(10, 2); -- Duration of Operation
-ALTER TABLE Op.FactOperation ADD Patient_Age INT;
-ALTER TABLE Op.FactOperation ADD Operation_Price DECIMAL(10, 2); -- Operation Price
+ALTER TABLE Op.FactOperation ADD DurationOfOperation DECIMAL(10, 2); -- Duration of Operation
+ALTER TABLE Op.FactOperation ADD PatientAge INT;
+ALTER TABLE Op.FactOperation ADD OperationPrice DECIMAL(10, 2); -- Operation Price
 ALTER TABLE Op.FactOperation ADD HashCode NVarChar(1000);
 ALTER TABLE Op.FactOperation ADD ValidFrom DATE;
 ALTER TABLE Op.FactOperation ADD ValidTo DATE;
@@ -39,7 +39,7 @@ GO
 
 --DIM_OP
 CREATE TABLE Op.DimOperation (
-    Operation_Surrogate_ID INT IDENTITY(1,1) PRIMARY KEY -- Business Key (BK)
+    OperationSK INT IDENTITY(1,1) PRIMARY KEY -- Business Key (BK)
 );
 GO
 ALTER TABLE OP.DimOperation ADD OperationID INT;
@@ -48,7 +48,7 @@ ALTER TABLE Op.DimOperation ADD End_Time DATETIME;
 ALTER TABLE Op.DimOperation ADD Start_Time DATETIME;
 ALTER TABLE Op.DimOperation ADD [Date] DATE;
 ALTER TABLE Op.DimOperation ADD [Status] VARCHAR(50);
-ALTER TABLE Op.DimOperation ADD HASHCODE NVARCHAR(1000);
+ALTER TABLE Op.DimOperation ADD HashCode NVARCHAR(1000);
 ALTER TABLE Op.DimOperation ADD ValidFrom DATE;
 ALTER TABLE Op.DimOperation ADD ValidTo DATE;
 ALTER TABLE Op.DimOperation ADD RowStatus VARCHAR(1);
@@ -57,23 +57,22 @@ GO
 
 
 -- FactInvoice
-
-
 -- Create the FactInvoice table within the INV schema with just the surrogate key
 CREATE TABLE INV.FactInvoice (
-    Invoice_Surrogate_ID INT IDENTITY(1,1) PRIMARY KEY -- Surrogate Key (SK)
+    InvoiceBK INT IDENTITY(1,1) PRIMARY KEY -- Surrogate Key (SK)
 );
 GO
 -- Add other attributes to the FactInvoice table
 ALTER TABLE INV.FactInvoice ADD InvoiceID INT;
-ALTER TABLE INV.FactInvoice ADD Treatment_ID INT;
-ALTER TABLE INV.FactInvoice ADD Patient_ID INT;
-ALTER TABLE INV.FactInvoice ADD Insurance_ID INT;
+ALTER TABLE INV.FactInvoice ADD DateID BIGINT;
+ALTER TABLE INV.FactInvoice ADD TreatmentID INT;
+ALTER TABLE INV.FactInvoice ADD PatientID INT;
+ALTER TABLE INV.FactInvoice ADD InsuranceID INT;
 ALTER TABLE INV.FactInvoice ADD TreatmentDate DATE;
 ALTER TABLE INV.FactInvoice ADD ExpirationDate DATE;
 ALTER TABLE INV.FactInvoice ADD PaymentDate DATE;
-ALTER TABLE INV.FactInvoice ADD Treatment_Type VARCHAR(50);
-ALTER TABLE INV.FactInvoice ADD Medicine_ID INT;
+ALTER TABLE INV.FactInvoice ADD TreatmentType VARCHAR(50);
+ALTER TABLE INV.FactInvoice ADD MedicineID INT;
 ALTER TABLE INV.FactInvoice ADD InvoiceAmount DECIMAL(10, 2);
 ALTER TABLE INV.FactInvoice ADD Quantity INT;
 ALTER TABLE INV.FactInvoice ADD CoveragePercentage DECIMAL(5, 2);
@@ -87,14 +86,14 @@ GO
 
 -- Create the DimInvoice table within the INV schema with just the primary key
 CREATE TABLE INV.DimInvoice (
-    Invoice_Surrogate_ID INT PRIMARY KEY -- Primary Key
+    InvoiceSK INT PRIMARY KEY -- Primary Key
 );
 GO
 -- Add other attributes to the DimInvoice table
 ALTER TABLE INV.DimInvoice ADD InvoiceID INT;
 ALTER TABLE INV.DimInvoice ADD Date DATE;
 ALTER TABLE INV.DimInvoice ADD Status VARCHAR(50);
-ALTER TABLE INV.DimInvoice ADD HASHCODE NVARCHAR(1000);
+ALTER TABLE INV.DimInvoice ADD HashCode NVARCHAR(1000);
 ALTER TABLE INV.DimInvoice ADD ValidFrom DATE;
 ALTER TABLE INV.DimInvoice ADD ValidTo DATE;
 ALTER TABLE INV.DimInvoice ADD RowStatus VARCHAR(1);
@@ -102,13 +101,13 @@ ALTER TABLE INV.DimInvoice ADD IsLatest VARCHAR(1);
 GO
 
 CREATE TABLE Shared.DimDepartment (
-    Department_Surrogate_ID INT IDENTITY(1,1) PRIMARY KEY -- Surrogate Key (SK)
+    DepartmentSK INT IDENTITY(1,1) PRIMARY KEY -- Surrogate Key (SK)
 );
 GO
 ALTER TABLE Shared.DimDepartment ADD DepartmentID INT;
-ALTER TABLE Shared.DimDepartment ADD Department_Name VARCHAR(100); -- Assuming the department name is a string of up to 100 characters
+ALTER TABLE Shared.DimDepartment ADD DepartmentName VARCHAR(100); -- Assuming the department name is a string of up to 100 characters
 ALTER TABLE Shared.DimDepartment ADD ContactNumber VARCHAR(20); -- Assuming the contact number is a string of up to 20 characters
-ALTER TABLE Shared.DimDepartment ADD HASHCODE NVARCHAR(1000);
+ALTER TABLE Shared.DimDepartment ADD HashCode NVARCHAR(1000);
 ALTER TABLE Shared.DimDepartment ADD ValidFrom DATE;
 ALTER TABLE Shared.DimDepartment ADD ValidTo DATE;
 ALTER TABLE Shared.DimDepartment ADD RowStatus VARCHAR(1);
@@ -124,10 +123,10 @@ GO
 -- Add other attributes to the DimInsurance table
 ALTER TABLE Inv.DimInsurance ADD InsuranceID INT;
 ALTER TABLE Inv.DimInsurance ADD Company VARCHAR(100); -- Assuming company name is a string of up to 100 characters
-ALTER TABLE Inv.DimInsurance ADD Coverage_Percentage DECIMAL(5, 2); -- Coverage percentage with two decimal places
-ALTER TABLE Inv.DimInsurance ADD Policy_Number VARCHAR(50); -- Assuming policy number is a string of up to 50 characters
-ALTER TABLE Inv.DimInsurance ADD End_Date DATE; -- End date of the policy
-ALTER TABLE Inv.DimInsurance ADD HASHCODE NVARCHAR(1000);
+ALTER TABLE Inv.DimInsurance ADD CoveragePercentage DECIMAL(5, 2); -- Coverage percentage with two decimal places
+ALTER TABLE Inv.DimInsurance ADD PolicyNumber VARCHAR(50); -- Assuming policy number is a string of up to 50 characters
+ALTER TABLE Inv.DimInsurance ADD EndDate DATE; -- End date of the policy
+ALTER TABLE Inv.DimInsurance ADD HashCode NVARCHAR(1000);
 ALTER TABLE Inv.DimInsurance ADD ValidFrom DATE;
 ALTER TABLE Inv.DimInsurance ADD ValidTo DATE;
 ALTER TABLE Inv.DimInsurance ADD RowStatus VARCHAR(1);
@@ -137,20 +136,20 @@ GO
 
 -- Create the DimEmployee table within the Shared schema with just the primary key
 CREATE TABLE Shared.DimEmployee (
-    EmployeeSurrogateID INT IDENTITY(1,1) PRIMARY KEY -- Primary Key (BK)
+    EmployeeSK INT IDENTITY(1,1) PRIMARY KEY -- Primary Key (BK)
 );
 GO
 ALTER TABLE Shared.DimEmployee ADD EmployeeID INT;
-ALTER TABLE Shared.DimEmployee ADD Name VARCHAR(100); -- Assuming the employee's name is a string of up to 100 characters
+ALTER TABLE Shared.DimEmployee ADD [Name] VARCHAR(100); -- Assuming the employee's name is a string of up to 100 characters
 ALTER TABLE Shared.DimEmployee ADD DOB DATE; -- Date of Birth
 ALTER TABLE Shared.DimEmployee ADD Insurance VARCHAR(100); -- Assuming insurance details are a string of up to 100 characters
-ALTER TABLE Shared.DimEmployee ADD Emergency_Contact VARCHAR(100); -- Emergency contact information
+ALTER TABLE Shared.DimEmployee ADD EmergencyContact VARCHAR(100); -- Emergency contact information
 ALTER TABLE Shared.DimEmployee ADD Email VARCHAR(100); -- Email address
 ALTER TABLE Shared.DimEmployee ADD Salary DECIMAL(10, 2); -- Salary with two decimal places
-ALTER TABLE Shared.DimEmployee ADD Phone_Number VARCHAR(30); -- Phone number
+ALTER TABLE Shared.DimEmployee ADD PhoneNumber VARCHAR(30); -- Phone number
 ALTER TABLE Shared.DimEmployee ADD HireDate DATE; -- Hire date
 ALTER TABLE Shared.DimEmployee ADD Position VARCHAR(50); -- Job position
-ALTER TABLE Shared.DimEmployee ADD HASHCODE NVARCHAR(1000);
+ALTER TABLE Shared.DimEmployee ADD HashCode NVARCHAR(1000);
 ALTER TABLE Shared.DimEmployee ADD ValidFrom DATE;
 ALTER TABLE Shared.DimEmployee ADD ValidTo DATE;
 ALTER TABLE Shared.DimEmployee ADD RowStatus VARCHAR(1);
@@ -161,19 +160,19 @@ GO
 --Dim_PHarmacy
 -- Create the DimPharmacyStorage table within the Inv schema with just the primary key
 CREATE TABLE Inv.DimPharmacyStorage (
-    Medicine_ID INT IDENTITY(1,1) PRIMARY KEY -- Business Key (BK)
+    MedicineID INT IDENTITY(1,1) PRIMARY KEY -- Business Key (BK)
 );
 GO
 -- Add other attributes to the DimPharmacyStorage table
-ALTER TABLE Inv.DimPharmacyStorage ADD Treatment_ID INT;
+ALTER TABLE Inv.DimPharmacyStorage ADD TreatmentID INT;
 ALTER TABLE Inv.DimPharmacyStorage ADD Name VARCHAR(100); -- Assuming medicine name is a string of up to 100 characters
-ALTER TABLE Inv.DimPharmacyStorage ADD Current_Quantity INT;
-ALTER TABLE Inv.DimPharmacyStorage ADD Minimum_Quantity INT;
-ALTER TABLE Inv.DimPharmacyStorage ADD Quantity_Order INT;
+ALTER TABLE Inv.DimPharmacyStorage ADD CurrentQuantity INT;
+ALTER TABLE Inv.DimPharmacyStorage ADD MinimumQuantity INT;
+ALTER TABLE Inv.DimPharmacyStorage ADD QuantityOrder INT;
 ALTER TABLE Inv.DimPharmacyStorage ADD Price DECIMAL(10, 2); -- Price with two decimal places
-ALTER TABLE Inv.DimPharmacyStorage ADD Expiration_Date DATE;
+ALTER TABLE Inv.DimPharmacyStorage ADD ExpirationDate DATE;
 ALTER TABLE Inv.DimPharmacyStorage ADD Description VARCHAR(255); -- Assuming description is a string of up to 255 characters
-ALTER TABLE Inv.DimPharmacyStorage ADD HASHCODE NVARCHAR(1000);
+ALTER TABLE Inv.DimPharmacyStorage ADD HashCode NVARCHAR(1000);
 ALTER TABLE Inv.DimPharmacyStorage ADD ValidFrom DATE;
 ALTER TABLE Inv.DimPharmacyStorage ADD ValidTo DATE;
 ALTER TABLE Inv.DimPharmacyStorage ADD RowStatus VARCHAR(1);
@@ -188,20 +187,20 @@ CREATE TABLE Shared.DimPatient (
 GO
 
 -- Add other attributes to the DimPatient table
-ALTER TABLE Shared.DimPatient ADD Patient_ID INT
-ALTER TABLE Shared.DimPatient ADD Patient_Name VARCHAR(100); -- Assuming the patient name is a string of up to 100 characters
+ALTER TABLE Shared.DimPatient ADD PatientID INT
+ALTER TABLE Shared.DimPatient ADD PatientName VARCHAR(100); -- Assuming the patient name is a string of up to 100 characters
 ALTER TABLE Shared.DimPatient ADD DOB DATE; -- Date of Birth
 ALTER TABLE Shared.DimPatient ADD BloodType VARCHAR(3); -- Blood Type (e.g., "A+", "O-")
 ALTER TABLE Shared.DimPatient ADD Nationality VARCHAR(50); -- Nationality as a string
 ALTER TABLE Shared.DimPatient ADD Gender VARCHAR(10); -- Gender
-ALTER TABLE Shared.DimPatient ADD Phone_Number VARCHAR(30); -- Phone number
-ALTER TABLE Shared.DimPatient ADD Emergency_Contact VARCHAR(100); -- Emergency contact information
-ALTER TABLE Shared.DimPatient ADD Admission_Date DATE; -- Admission date
-ALTER TABLE Shared.DimPatient ADD Admission_Reason VARCHAR(255); -- Reason for admission
+ALTER TABLE Shared.DimPatient ADD PhoneNumber VARCHAR(30); -- Phone number
+ALTER TABLE Shared.DimPatient ADD EmergencyContact VARCHAR(100); -- Emergency contact information
+ALTER TABLE Shared.DimPatient ADD AdmissionDate DATE; -- Admission date
+ALTER TABLE Shared.DimPatient ADD AdmissionReason VARCHAR(255); -- Reason for admission
 ALTER TABLE Shared.DimPatient ADD Prescription VARCHAR(255); -- Prescription details
-ALTER TABLE Shared.DimPatient ADD Visit_Date DATE; -- Visit date
-ALTER TABLE Shared.DimPatient ADD Discharge_Date DATE; -- Discharge date
-ALTER TABLE Shared.DimPatient ADD HASHCODE NVARCHAR(1000);
+ALTER TABLE Shared.DimPatient ADD VisitDate DATE; -- Visit date
+ALTER TABLE Shared.DimPatient ADD DischargeDate DATE; -- Discharge date
+ALTER TABLE Shared.DimPatient ADD HashCode NVARCHAR(1000);
 ALTER TABLE Shared.DimPatient ADD ValidFrom DATE;
 ALTER TABLE Shared.DimPatient ADD ValidTo DATE;
 ALTER TABLE Shared.DimPatient ADD RowStatus VARCHAR(1);
@@ -214,15 +213,14 @@ GO
 
 -- Create the FactAttendance table within the ATT schema with just the primary key
 CREATE TABLE ATT.FactAttendance (
-    Attendance_Surrogate_ID INT IDENTITY(1,1) PRIMARY KEY -- Surrogate Key (SK)
+    AttendanceBK INT IDENTITY(1,1) PRIMARY KEY -- Surrogate Key (SK)
 );
 GO
 -- Add other attributes to the FactAttendance table
-ALTER TABLE ATT.FactAttendance ADD Attendance_ID INT; -- Foreign key for Attendance ID
-ALTER TABLE ATT.FactAttendance ADD Employee_ID INT; -- Foreign key for Employee
+ALTER TABLE ATT.FactAttendance ADD AttendanceID INT; -- Foreign key for Attendance ID
+ALTER TABLE ATT.FactAttendance ADD EmployeeID INT; -- Foreign key for Employee
 ALTER TABLE ATT.FactAttendance ADD DateID BIGINT; -- Foreign key for Date ID
-ALTER TABLE ATT.FactAttendance ADD Working_Hours DECIMAL(5, 2); -- Working hours (e.g., 8.00 hours)
-ALTER TABLE ATT.FactAttendance ADD Attendance_Per_Months INT; -- Number of attendance days in the month
+ALTER TABLE ATT.FactAttendance ADD WorkingHours DECIMAL(5, 2); -- Working hours (e.g., 8.00 hours)
 ALTER TABLE ATT.FactAttendance ADD CheckIn DATETIME; -- Check-in time
 ALTER TABLE ATT.FactAttendance ADD CheckOut DATETIME; -- Check-out time
 ALTER TABLE ATT.FactAttendance ADD HashCode nVarChar(1000);
@@ -714,9 +712,21 @@ GO
 ALTER SCHEMA Shared TRANSFER DimDate;
 
 
-ALTER TABLE INV.FactInvoice ADD PatientID INT FOREIGN KEY REFERENCES Shared.DimPatient( PatientSK ); 
-ALTER TABLE INV.FactInvoice ADD DateID BIGINT FOREIGN KEY REFERENCES Shared.DimDate([DateSk]);
-ALTER TABLE INV.FactInvoice ADD DepartmentID INT FOREIGN KEY REFERENCES Shared.DimDepartment(DepartmentID);
+ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_PA_FACTINV FOREIGN KEY (PatientID) REFERENCES Shared.DimPatient(PatientSK); 
+ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_DA_FACTINV FOREIGN KEY (DateID) REFERENCES Shared.DimDate([DateSk]);
+ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INV_FACTINV FOREIGN KEY (InvoiceID) REFERENCES Inv.DimInvoice(InvoiceSK);
+ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INS_FACTINV FOREIGN KEY (InsuranceID) REFERENCES Inv.DimInsurance(InsuranceSK);
+ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_PH_FACTINV FOREIGN KEY (MedicineID) REFERENCES Inv.DimPharmacyStorage(MedicineID);
 
 
-ALTER TABLE Op.FactOperation ADD EmployeeID INT FOREIGN KEY REFERENCES Shared.DimEmployee(ID)
+GO
+ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_EMP_FACTOP FOREIGN KEY (EmployeeID) REFERENCES Shared.DimEmployee(EmployeeSK)
+ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_OP_FACTOP FOREIGN KEY (OperationID) REFERENCES Op.DimOperation(OperationSK)
+ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_PA_FACTOP FOREIGN KEY (PatientID) REFERENCES Shared.DimPatient(PatientSK)
+ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_DA_FACTOP FOREIGN KEY (DateID) REFERENCES Shared.DimDate(DateSk)
+ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_DEP_FACTOP FOREIGN KEY (DepartmentID) REFERENCES Shared.DimDepartment(DepartmentSK)
+
+-- FKs for FactAttendance
+ALTER TABLE Att.FactAttendance ADD CONSTRAINT FK_DA_FACTATT FOREIGN KEY (DateID) REFERENCES Shared.DimDate(DateSK);
+ALTER TABLE Att.FactAttendance ADD CONSTRAINT FK_EMP_FACTATT FOREIGN KEY (EmployeeID) REFERENCES Shared.DimEmployee(EmployeeSK)
+
