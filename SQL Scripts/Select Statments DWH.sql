@@ -54,15 +54,15 @@ ON P.Patient_ID = O.Patient_ID
 ORDER BY O.Operation_ID;
 
 -- FactInvoice
-SELECT INV.*, T.quantity, INS.Coverage_Percentage
+SELECT INV.*, T.ID, T.quantity, INS.Coverage_Percentage
 FROM INVOICE INV
-LEFT JOIN Treatment T ON T.TreatmentID=INV.TreatmentID
-LEFT JOIN Pharmacy_storage PHS ON PHS.Medicine_id=T.Medicine_ID
-LEFT JOIN Appointment A ON A.Appointment_ID=INV.Appointment_ID
-LEFT JOIN Lab_Test L ON L.Lab_test_id = INV.Lab_Test_ID
-LEFT JOIN Operation O ON O.Operation_ID=INV.Operation_ID
-LEFT JOIN Patient P ON P.Patient_ID=INV.Patient_ID
-LEFT JOIN Insurance INS ON INS.Insurance_ID=P.Insurance_ID
+LEFT JOIN Treatment T ON T.TreatmentID=INV.TreatmentID AND T.IsLatest='Y'
+LEFT JOIN Pharmacy_storage PHS ON PHS.Medicine_id=T.Medicine_ID AND PHS.IsLatest='Y'
+LEFT JOIN Appointment A ON A.Appointment_ID=INV.Appointment_ID AND A.IsLatest='Y'
+LEFT JOIN Lab_Test L ON L.Lab_test_id = INV.Lab_Test_ID AND L.IsLatest='Y'
+LEFT JOIN Operation O ON O.Operation_ID=INV.Operation_ID AND O.IsLatest='Y'
+LEFT JOIN Patient P ON P.Patient_ID=INV.Patient_ID AND P.IsLatest='Y'
+LEFT JOIN Insurance Ins ON INS.Insurance_ID=P.Insurance_ID AND Ins.IsLatest='Y'
 
 
 -- FactAttendance
