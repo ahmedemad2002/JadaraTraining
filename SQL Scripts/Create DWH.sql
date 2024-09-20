@@ -1,8 +1,8 @@
-CREATE DATABASE HMS_DWH7;
+CREATE DATABASE HMS_DWH;
 GO
-USE HMS_DWH7;
+USE HMS_DWH;
 GO
-ALTER DATABASE HMS_DWH7 COLLATE SQL_Latin1_General_CP1_CI_AS;
+ALTER DATABASE HMS_DWH COLLATE SQL_Latin1_General_CP1_CI_AS;
 GO
 -- Create the schema if it does not exist
 CREATE SCHEMA Shared;
@@ -64,14 +64,14 @@ CREATE TABLE INV.FactInvoice (
 GO
 -- Add other attributes to the FactInvoice table
 ALTER TABLE INV.FactInvoice ADD InvoiceID INT;
-ALTER TABLE INV.FactInvoice ADD DateID BIGINT;
+ALTER TABLE INV.FactInvoice ADD InvoiceDate BIGINT;
 ALTER TABLE INV.FactInvoice ADD TreatmentID INT;
 ALTER TABLE INV.FactInvoice ADD PatientID INT;
 ALTER TABLE INV.FactInvoice ADD InsuranceID INT;
 ALTER TABLE INV.FactInvoice ADD TreatmentDate DATE;
 ALTER TABLE INV.FactInvoice ADD ExpirationDate DATE;
 ALTER TABLE INV.FactInvoice ADD PaymentDate DATE;
-ALTER TABLE INV.FactInvoice ADD TreatmentType VARCHAR(50);
+--ALTER TABLE INV.FactInvoice ADD TreatmentType VARCHAR(50);
 ALTER TABLE INV.FactInvoice ADD MedicineID INT;
 ALTER TABLE INV.FactInvoice ADD InvoiceAmount DECIMAL(10, 2);
 ALTER TABLE INV.FactInvoice ADD Quantity INT;
@@ -86,7 +86,7 @@ GO
 
 -- Create the DimInvoice table within the INV schema with just the primary key
 CREATE TABLE INV.DimInvoice (
-    InvoiceSK INT PRIMARY KEY -- Primary Key
+    InvoiceSK INT IDENTITY(1,1) PRIMARY KEY -- Primary Key
 );
 GO
 -- Add other attributes to the DimInvoice table
@@ -117,7 +117,7 @@ GO
 --DIM_INSURANCE
 -- Create the DimInsurance table within the Inv schema with just the primary key
 CREATE TABLE Inv.DimInsurance (
-    InsuranceSK INT PRIMARY KEY -- Primary Key (BK)
+    InsuranceSK INT IDENTITY(1,1) PRIMARY KEY -- Primary Key (BK)
 );
 GO
 -- Add other attributes to the DimInsurance table
@@ -713,7 +713,7 @@ ALTER SCHEMA Shared TRANSFER DimDate;
 
 
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_PA_FACTINV FOREIGN KEY (PatientID) REFERENCES Shared.DimPatient(PatientSK); 
-ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_DA_FACTINV FOREIGN KEY (DateID) REFERENCES Shared.DimDate([DateSk]);
+ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_DA_FACTINV FOREIGN KEY (InvoiceDate) REFERENCES Shared.DimDate([DateSk]);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INV_FACTINV FOREIGN KEY (InvoiceID) REFERENCES Inv.DimInvoice(InvoiceSK);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INS_FACTINV FOREIGN KEY (InsuranceID) REFERENCES Inv.DimInsurance(InsuranceSK);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_PH_FACTINV FOREIGN KEY (MedicineID) REFERENCES Inv.DimPharmacyStorage(MedicineID);

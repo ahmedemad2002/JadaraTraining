@@ -2,48 +2,53 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>HMS_DWH</Name>
-    <LastWriteTime>2024-09-16T19:44:18.2853465Z</LastWriteTime>
+    <LastWriteTime>2024-09-16T20:06:19.2221729Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimEmployee.dtsx</Name>
-      <LastWriteTime>2024-09-14T23:13:57.2386495Z</LastWriteTime>
+      <LastWriteTime>2024-09-19T20:26:11.8533123Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimDepartment.dtsx</Name>
-      <LastWriteTime>2024-09-15T07:41:11.8817828Z</LastWriteTime>
+      <LastWriteTime>2024-09-19T20:16:32.4107235Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimPatient.dtsx</Name>
-      <LastWriteTime>2024-09-14T23:22:19.319231Z</LastWriteTime>
+      <LastWriteTime>2024-09-19T20:49:47.1307136Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FactAttendance.dtsx</Name>
-      <LastWriteTime>2024-09-15T00:32:08.3910694Z</LastWriteTime>
+      <LastWriteTime>2024-09-19T21:03:16.1133136Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimOperation.dtsx</Name>
-      <LastWriteTime>2024-09-16T18:46:28.2105793Z</LastWriteTime>
+      <LastWriteTime>2024-09-19T20:43:15.9936483Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimInsurance.dtsx</Name>
-      <LastWriteTime>2024-09-16T18:53:38.1384321Z</LastWriteTime>
+      <LastWriteTime>2024-09-19T20:27:01.5933208Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimInvoice.dtsx</Name>
-      <LastWriteTime>2024-09-16T18:56:43.6191696Z</LastWriteTime>
+      <LastWriteTime>2024-09-19T23:40:16.0712492Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FactOperation.dtsx</Name>
-      <LastWriteTime>2024-09-16T19:50:09.0748923Z</LastWriteTime>
+      <LastWriteTime>2024-09-20T01:28:20.4384698Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FactInvoice.dtsx</Name>
+      <LastWriteTime>2024-09-20T00:40:46.6236432Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

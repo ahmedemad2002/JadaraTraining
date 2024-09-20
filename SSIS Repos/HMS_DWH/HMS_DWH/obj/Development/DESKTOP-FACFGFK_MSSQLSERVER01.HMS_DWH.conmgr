@@ -7,6 +7,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=DESKTOP-FACFGFK\MSSQLSERVER01;Initial Catalog=HMS_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-HMS_DWH-{5C8B3963-161E-4B0C-84CD-F8BE076E6D4B}DESKTOP-FACFGFK\MSSQLSERVER01.HMS_DWH;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=DESKTOP-FACFGFK\MSSQLSERVER01;Initial Catalog=HMS_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-HMS_DWH-{5C8B3963-161E-4B0C-84CD-F8BE076E6D4B}DESKTOP-FACFGFK\MSSQLSERVER01.HMS_DWH;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
