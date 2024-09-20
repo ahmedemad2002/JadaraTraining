@@ -68,9 +68,9 @@ ALTER TABLE INV.FactInvoice ADD InvoiceDate BIGINT;
 ALTER TABLE INV.FactInvoice ADD TreatmentID INT;
 ALTER TABLE INV.FactInvoice ADD PatientID INT;
 ALTER TABLE INV.FactInvoice ADD InsuranceID INT;
-ALTER TABLE INV.FactInvoice ADD TreatmentDate DATE;
-ALTER TABLE INV.FactInvoice ADD ExpirationDate DATE;
-ALTER TABLE INV.FactInvoice ADD PaymentDate DATE;
+ALTER TABLE INV.FactInvoice ADD TreatmentDate BIGINT;
+ALTER TABLE INV.FactInvoice ADD ExpirationDate BIGINT;
+--ALTER TABLE INV.FactInvoice ADD PaymentDate BIGINT;
 --ALTER TABLE INV.FactInvoice ADD TreatmentType VARCHAR(50);
 ALTER TABLE INV.FactInvoice ADD MedicineID INT;
 ALTER TABLE INV.FactInvoice ADD InvoiceAmount DECIMAL(10, 2);
@@ -125,7 +125,7 @@ ALTER TABLE Inv.DimInsurance ADD InsuranceID INT;
 ALTER TABLE Inv.DimInsurance ADD Company VARCHAR(100); -- Assuming company name is a string of up to 100 characters
 ALTER TABLE Inv.DimInsurance ADD CoveragePercentage DECIMAL(5, 2); -- Coverage percentage with two decimal places
 ALTER TABLE Inv.DimInsurance ADD PolicyNumber VARCHAR(50); -- Assuming policy number is a string of up to 50 characters
-ALTER TABLE Inv.DimInsurance ADD EndDate DATE; -- End date of the policy
+ALTER TABLE Inv.DimInsurance ADD InsuranceEndDate BIGINT; -- End date of the policy
 ALTER TABLE Inv.DimInsurance ADD HashCode NVARCHAR(1000);
 ALTER TABLE Inv.DimInsurance ADD ValidFrom DATE;
 ALTER TABLE Inv.DimInsurance ADD ValidTo DATE;
@@ -717,6 +717,7 @@ ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_DA_FACTINV FOREIGN KEY (InvoiceDat
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INV_FACTINV FOREIGN KEY (InvoiceID) REFERENCES Inv.DimInvoice(InvoiceSK);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INS_FACTINV FOREIGN KEY (InsuranceID) REFERENCES Inv.DimInsurance(InsuranceSK);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_PH_FACTINV FOREIGN KEY (MedicineID) REFERENCES Inv.DimPharmacyStorage(MedicineID);
+
 
 
 GO
