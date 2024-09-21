@@ -30,7 +30,9 @@ SELECT DepartmentID, Department_Name, ContactNumber, HashCode, StartDate, EndDat
 FROM Department
 
 -- DimInsurance
-SELECT Insurance_ID, company, Coverage_Percentage, policy_number, end_date, HashCode, StartDate, EndDate, RowStatus, IsLatest
+SELECT Insurance_ID, company, Coverage_Percentage, policy_number,
+	(YEAR(end_date) * 10000) + (MONTH(end_date) * 100) + DAY(end_date) AS InsuranceEndDate,
+	HashCode, StartDate, EndDate, RowStatus, IsLatest
 FROM Insurance
 
 -- DimInvoice
@@ -40,6 +42,13 @@ FROM Invoice
 -- DimEmployee
 SELECT Employee_ID, [Name], DOB, Insurance_ID, Emergency_Contact, Email, Salary, Phone_Number, HireDate, [Role], HashCode, StartDate, EndDate, RowStatus, IsLatest
 FROM Employee
+
+-- DimPharmacyStorage
+SELECT T.TreatmentID, PhS.[name], Phs.Quantity AS CurrentQuantity, PhS.MinQuantity, PhS.OrderQuantity,
+	Phs.price, PhS.expiration_date, T.[description],
+	T.HashCode, T.StartDate, T.EndDate, T.RowStatus, T.IsLatest
+FROM Treatment T
+LEFT JOIN Pharmacy_storage PhS ON T.Medicine_ID=PhS.Medicine_id AND PHS.IsLatest='Y'
 
 -- FactOperation
 SELECT O.ID AS OperationSK, DO.ID AS DOSK, E.ID AS EmpSK, P.ID AS PatientSK, Dept.ID as DeptSK,
@@ -55,13 +64,14 @@ LEFT JOIN Department Dept ON Dept.DepartmentID=E.DepartmentID AND Dept.IsLatest=
 ORDER BY O.Operation_ID;
 
 -- FactInvoice
-SELECT INV.*, Inv.ID AS InvoiceSK,
+SELECT INV.*, Inv.ID AS InvoiceSK, L.ID AS LabTestID,
+	(YEAR(INV.date) * 10000) + (MONTH(INV.date) * 100) + DAY(INV.date) AS PaymentDate,
     (YEAR(INV.date) * 10000) + (MONTH(INV.date) * 100) + DAY(INV.date) AS InvoiceDate,
 	T.ID AS TreatmentSK, T.quantity,
     (YEAR(T.[date]) * 10000) + (MONTH(T.[date]) * 100) + DAY(T.[date]) AS TreatmentDate,
 	INS.Coverage_Percentage,
     (YEAR(PHS.expiration_date) * 10000) + (MONTH(PHS.expiration_date) * 100) + DAY(PHS.expiration_date) AS MedicineExpirationDate,
-	PHS.ID AS MedicineID
+	PHS.ID AS MedicineIDs
 FROM INVOICE INV
 LEFT JOIN Treatment T ON T.TreatmentID=INV.TreatmentID AND T.IsLatest='Y'
 LEFT JOIN Pharmacy_storage PHS ON PHS.Medicine_id=T.Medicine_ID AND PHS.IsLatest='Y'
