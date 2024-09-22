@@ -11,8 +11,8 @@
   DTS:LocaleID="3073"
   DTS:ObjectName="DimOperation"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{3A943C8B-2B44-4BF9-8070-4E58B700D789}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{382B1A75-E3C8-42E7-8297-89F8C7A4962F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -45,13 +45,13 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Op].[DimOperation]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Shared].[DimOperation]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Op].[DimOperation]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Shared].[DimOperation]) [refTable]
 where [refTable].[HashCode] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -189,7 +189,7 @@ where [refTable].[HashCode] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Op].[DimOperation]</property>
+                  name="OpenRowset">[Shared].[DimOperation]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -290,12 +290,6 @@ where [refTable].[HashCode] = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsLatest]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsLatest]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Operation_ID]"
-                      cachedDataType="i4"
-                      cachedName="Operation_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OperationID]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Operation_ID]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StartDate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="StartDate"
@@ -320,6 +314,12 @@ where [refTable].[HashCode] = ?</property>
                       cachedName="end_time"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[End_Time]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[end_time]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Operation_ID]"
+                      cachedDataType="i4"
+                      cachedName="Operation_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OperationID]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Operation_ID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -858,7 +858,7 @@ FROM Operation</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[Op].[DimOperation]</Value>
+          type="q3:string">[Shared].[DimOperation]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>

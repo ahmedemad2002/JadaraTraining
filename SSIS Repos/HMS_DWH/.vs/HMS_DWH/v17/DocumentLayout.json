@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInsurance.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimInsurance.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\FactOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
       "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimEmployee.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimEmployee.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimDepartment.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimDepartment.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\FactInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
       "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactAttendance.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
@@ -35,12 +27,20 @@
       "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimPatient.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\FactInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\FactOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInsurance.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimInsurance.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimEmployee.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimEmployee.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimDepartment.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimDepartment.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,43 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DimDepartment.dtsx [Design]",
-              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimDepartment.dtsx",
-              "RelativeDocumentMoniker": "HMS_DWH\\DimDepartment.dtsx",
-              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimDepartment.dtsx [Design]",
-              "RelativeToolTip": "HMS_DWH\\DimDepartment.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-19T22:07:45.762Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DimEmployee.dtsx [Design]",
-              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimEmployee.dtsx",
-              "RelativeDocumentMoniker": "HMS_DWH\\DimEmployee.dtsx",
-              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimEmployee.dtsx [Design]",
-              "RelativeToolTip": "HMS_DWH\\DimEmployee.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-19T22:07:51.927Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DimInsurance.dtsx [Design]",
-              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInsurance.dtsx",
-              "RelativeDocumentMoniker": "HMS_DWH\\DimInsurance.dtsx",
-              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInsurance.dtsx [Design]",
-              "RelativeToolTip": "HMS_DWH\\DimInsurance.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-19T22:07:59.563Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DimInvoice.dtsx [Design]",
               "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInvoice.dtsx",
               "RelativeDocumentMoniker": "HMS_DWH\\DimInvoice.dtsx",
@@ -106,43 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DimOperation.dtsx [Design]",
-              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimOperation.dtsx",
-              "RelativeDocumentMoniker": "HMS_DWH\\DimOperation.dtsx",
-              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimOperation.dtsx [Design]",
-              "RelativeToolTip": "HMS_DWH\\DimOperation.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-19T20:40:58.988Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "FactAttendance.dtsx [Design]",
-              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactAttendance.dtsx",
-              "RelativeDocumentMoniker": "HMS_DWH\\FactAttendance.dtsx",
-              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactAttendance.dtsx [Design]",
-              "RelativeToolTip": "HMS_DWH\\FactAttendance.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-19T20:41:04.527Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DimPharmacyStorage.dtsx [Design]",
-              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimPharmacyStorage.dtsx",
-              "RelativeDocumentMoniker": "HMS_DWH\\DimPharmacyStorage.dtsx",
-              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimPharmacyStorage.dtsx [Design]",
-              "RelativeToolTip": "HMS_DWH\\DimPharmacyStorage.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-20T01:30:41.217Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "DimPatient.dtsx [Design]",
               "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimPatient.dtsx",
               "RelativeDocumentMoniker": "HMS_DWH\\DimPatient.dtsx",
@@ -154,7 +82,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
+              "Title": "DimPharmacyStorage.dtsx [Design]",
+              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimPharmacyStorage.dtsx",
+              "RelativeDocumentMoniker": "HMS_DWH\\DimPharmacyStorage.dtsx",
+              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimPharmacyStorage.dtsx [Design]",
+              "RelativeToolTip": "HMS_DWH\\DimPharmacyStorage.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-09-20T01:30:41.217Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FactAttendance.dtsx [Design]",
+              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactAttendance.dtsx",
+              "RelativeDocumentMoniker": "HMS_DWH\\FactAttendance.dtsx",
+              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactAttendance.dtsx [Design]",
+              "RelativeToolTip": "HMS_DWH\\FactAttendance.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-09-19T20:41:04.527Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FactInvoice.dtsx [Design]",
               "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactInvoice.dtsx",
               "RelativeDocumentMoniker": "HMS_DWH\\FactInvoice.dtsx",
@@ -166,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "FactOperation.dtsx [Design]",
               "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactOperation.dtsx",
               "RelativeDocumentMoniker": "HMS_DWH\\FactOperation.dtsx",
@@ -174,6 +126,54 @@
               "RelativeToolTip": "HMS_DWH\\FactOperation.dtsx [Design]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
               "WhenOpened": "2024-09-20T00:40:57.377Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DimOperation.dtsx [Design]",
+              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimOperation.dtsx",
+              "RelativeDocumentMoniker": "HMS_DWH\\DimOperation.dtsx",
+              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimOperation.dtsx [Design]",
+              "RelativeToolTip": "HMS_DWH\\DimOperation.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-09-19T20:40:58.988Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DimInsurance.dtsx [Design]",
+              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInsurance.dtsx",
+              "RelativeDocumentMoniker": "HMS_DWH\\DimInsurance.dtsx",
+              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInsurance.dtsx [Design]",
+              "RelativeToolTip": "HMS_DWH\\DimInsurance.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-09-19T22:07:59.563Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DimEmployee.dtsx [Design]",
+              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimEmployee.dtsx",
+              "RelativeDocumentMoniker": "HMS_DWH\\DimEmployee.dtsx",
+              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimEmployee.dtsx [Design]",
+              "RelativeToolTip": "HMS_DWH\\DimEmployee.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-09-19T22:07:51.927Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DimDepartment.dtsx [Design]",
+              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimDepartment.dtsx",
+              "RelativeDocumentMoniker": "HMS_DWH\\DimDepartment.dtsx",
+              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimDepartment.dtsx [Design]",
+              "RelativeToolTip": "HMS_DWH\\DimDepartment.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-09-19T22:07:45.762Z",
               "EditorCaption": " [Design]"
             }
           ]
