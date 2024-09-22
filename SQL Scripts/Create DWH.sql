@@ -81,6 +81,8 @@ ALTER TABLE INV.FactInvoice ADD ValidFrom DATE;
 ALTER TABLE INV.FactInvoice ADD ValidTo DATE;
 ALTER TABLE INV.FactInvoice ADD RowStatus VARCHAR(1);
 ALTER TABLE INV.FactInvoice ADD IsLatest VARCHAR(1);
+ALTER TABLE INV.FactInvoice ADD LabtestID INT;
+
 GO
 
 
@@ -229,6 +231,35 @@ ALTER TABLE ATT.FactAttendance ADD ValidTo DATE;
 ALTER TABLE ATT.FactAttendance ADD RowStatus VARCHAR(1);
 ALTER TABLE ATT.FactAttendance ADD IsLatest VARCHAR(1);
 GO
+
+
+
+
+
+-- Create the Dim_LabTest table within the Lbt schema
+CREATE TABLE Inv.Dim_LabTest (
+    LabTestBK INT IDENTITY(1,1) PRIMARY KEY -- Surrogate Key (SK)
+);
+GO
+-- Add other attributes to the Dim_LabTest table
+ALTER TABLE Inv.Dim_LabTest ADD Lab_test_id INT; -- Foreign key for Lab test ID
+ALTER TABLE Inv.Dim_LabTest ADD test_date DATE; -- Test date
+ALTER TABLE Inv.Dim_LabTest ADD test_result VARCHAR(255); -- Test result
+ALTER TABLE Inv.Dim_LabTest ADD Test_Description VARCHAR(255); -- Test description
+ALTER TABLE Inv.Dim_LabTest ADD test_name VARCHAR(100); -- Test name
+ALTER TABLE Inv.Dim_LabTest ADD HashCode NVARCHAR(1000); -- Hash code for data integrity
+ALTER TABLE Inv.Dim_LabTest ADD ValidFrom DATE;
+ALTER TABLE Inv.Dim_LabTest ADD ValidTo DATE;
+ALTER TABLE Inv.Dim_LabTest ADD RowStatus VARCHAR(1); -- Row status (active/inactive)
+ALTER TABLE Inv.Dim_LabTest ADD IsLatest VARCHAR(1); -- Latest test flag
+GO
+
+
+
+
+
+
+
 
 
 
@@ -718,6 +749,7 @@ ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INV_FACTINV FOREIGN KEY (InvoiceID
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INS_FACTINV FOREIGN KEY (InsuranceID) REFERENCES Inv.DimInsurance(InsuranceSK);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_PH_FACTINV FOREIGN KEY (MedicineID) REFERENCES Inv.DimPharmacyStorage(MedicineID);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_OP_FACTINV FOREIGN KEY (OperationID) REFERENCES Shared.DimOperation(OperationSK)
+ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_LAB_FACTINV FOREIGN KEY (LabtestID) REFERENCES Inv.Dim_LabTest(LabTestBK)
 
 
 GO
@@ -730,4 +762,8 @@ ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_DEP_FACTOP FOREIGN KEY (Departmen
 -- FKs for FactAttendance
 ALTER TABLE Att.FactAttendance ADD CONSTRAINT FK_DA_FACTATT FOREIGN KEY (DateID) REFERENCES Shared.DimDate(DateSK);
 ALTER TABLE Att.FactAttendance ADD CONSTRAINT FK_EMP_FACTATT FOREIGN KEY (EmployeeID) REFERENCES Shared.DimEmployee(EmployeeSK)
+
+
+
+
 
