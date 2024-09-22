@@ -38,21 +38,21 @@ ALTER TABLE Op.FactOperation ADD IsLatest VARCHAR(1);
 GO
 
 --DIM_OP
-CREATE TABLE Op.DimOperation (
+CREATE TABLE Shared.DimOperation (
     OperationSK INT IDENTITY(1,1) PRIMARY KEY -- Business Key (BK)
 );
 GO
-ALTER TABLE OP.DimOperation ADD OperationID INT;
-ALTER TABLE Op.DimOperation ADD Type VARCHAR(50);
-ALTER TABLE Op.DimOperation ADD End_Time DATETIME;
-ALTER TABLE Op.DimOperation ADD Start_Time DATETIME;
-ALTER TABLE Op.DimOperation ADD [Date] DATE;
-ALTER TABLE Op.DimOperation ADD [Status] VARCHAR(50);
-ALTER TABLE Op.DimOperation ADD HashCode NVARCHAR(1000);
-ALTER TABLE Op.DimOperation ADD ValidFrom DATE;
-ALTER TABLE Op.DimOperation ADD ValidTo DATE;
-ALTER TABLE Op.DimOperation ADD RowStatus VARCHAR(1);
-ALTER TABLE Op.DimOperation ADD IsLatest VARCHAR(1);
+ALTER TABLE Shared.DimOperation ADD OperationID INT;
+ALTER TABLE Shared.DimOperation ADD Type VARCHAR(50);
+ALTER TABLE Shared.DimOperation ADD End_Time DATETIME;
+ALTER TABLE Shared.DimOperation ADD Start_Time DATETIME;
+ALTER TABLE Shared.DimOperation ADD [Date] DATE;
+ALTER TABLE Shared.DimOperation ADD [Status] VARCHAR(50);
+ALTER TABLE Shared.DimOperation ADD HashCode NVARCHAR(1000);
+ALTER TABLE Shared.DimOperation ADD ValidFrom DATE;
+ALTER TABLE Shared.DimOperation ADD ValidTo DATE;
+ALTER TABLE Shared.DimOperation ADD RowStatus VARCHAR(1);
+ALTER TABLE Shared.DimOperation ADD IsLatest VARCHAR(1);
 GO
 
 
@@ -66,11 +66,11 @@ GO
 ALTER TABLE INV.FactInvoice ADD InvoiceID INT;
 ALTER TABLE INV.FactInvoice ADD InvoiceDate BIGINT;
 ALTER TABLE INV.FactInvoice ADD TreatmentID INT;
+ALTER TABLE INV.FactInvoice ADD OperationID INT;
 ALTER TABLE INV.FactInvoice ADD PatientID INT;
 ALTER TABLE INV.FactInvoice ADD InsuranceID INT;
 ALTER TABLE INV.FactInvoice ADD TreatmentDate BIGINT;
 ALTER TABLE INV.FactInvoice ADD ExpirationDate BIGINT;
---ALTER TABLE INV.FactInvoice ADD PaymentDate BIGINT;
 --ALTER TABLE INV.FactInvoice ADD TreatmentType VARCHAR(50);
 ALTER TABLE INV.FactInvoice ADD MedicineID INT;
 ALTER TABLE INV.FactInvoice ADD InvoiceAmount DECIMAL(10, 2);
@@ -717,12 +717,12 @@ ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_DA_FACTINV FOREIGN KEY (InvoiceDat
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INV_FACTINV FOREIGN KEY (InvoiceID) REFERENCES Inv.DimInvoice(InvoiceSK);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INS_FACTINV FOREIGN KEY (InsuranceID) REFERENCES Inv.DimInsurance(InsuranceSK);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_PH_FACTINV FOREIGN KEY (MedicineID) REFERENCES Inv.DimPharmacyStorage(MedicineID);
-
+ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_OP_FACTINV FOREIGN KEY (OperationID) REFERENCES Shared.DimOperation(OperationSK)
 
 
 GO
 ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_EMP_FACTOP FOREIGN KEY (EmployeeID) REFERENCES Shared.DimEmployee(EmployeeSK)
-ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_OP_FACTOP FOREIGN KEY (OperationID) REFERENCES Op.DimOperation(OperationSK)
+ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_OP_FACTOP FOREIGN KEY (OperationID) REFERENCES Shared.DimOperation(OperationSK)
 ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_PA_FACTOP FOREIGN KEY (PatientID) REFERENCES Shared.DimPatient(PatientSK)
 ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_DA_FACTOP FOREIGN KEY (DateID) REFERENCES Shared.DimDate(DateSk)
 ALTER TABLE Op.FactOperation ADD CONSTRAINT FK_DEP_FACTOP FOREIGN KEY (DepartmentID) REFERENCES Shared.DimDepartment(DepartmentSK)

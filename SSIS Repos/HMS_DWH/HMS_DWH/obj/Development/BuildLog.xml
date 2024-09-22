@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>HMS_DWH</Name>
-    <LastWriteTime>2024-09-16T20:06:19.2221729Z</LastWriteTime>
+    <LastWriteTime>2024-09-20T02:06:54.4541293Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -33,7 +33,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimInsurance.dtsx</Name>
-      <LastWriteTime>2024-09-19T20:27:01.5933208Z</LastWriteTime>
+      <LastWriteTime>2024-09-22T15:16:01.9938851Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -48,7 +48,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FactInvoice.dtsx</Name>
-      <LastWriteTime>2024-09-20T00:40:46.6236432Z</LastWriteTime>
+      <LastWriteTime>2024-09-22T14:58:12.0041376Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimPharmacyStorage.dtsx</Name>
+      <LastWriteTime>2024-09-20T02:06:42.6641233Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

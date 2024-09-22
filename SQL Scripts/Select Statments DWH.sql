@@ -64,9 +64,9 @@ LEFT JOIN Department Dept ON Dept.DepartmentID=E.DepartmentID AND Dept.IsLatest=
 ORDER BY O.Operation_ID;
 
 -- FactInvoice
-SELECT INV.*, Inv.ID AS InvoiceSK, L.ID AS LabTestID,
+SELECT INV.*, Inv.ID AS InvoiceSK, L.ID AS LabTestID, O.ID AS OperationID,
 	(YEAR(INV.date) * 10000) + (MONTH(INV.date) * 100) + DAY(INV.date) AS PaymentDate,
-    (YEAR(INV.date) * 10000) + (MONTH(INV.date) * 100) + DAY(INV.date) AS InvoiceDate,
+    (YEAR(INV.date) * 10000) + (MONTH(INV.date) * 100) + DAY(INV.date) AS InvoiceDateSK,
 	T.ID AS TreatmentSK, T.quantity,
     (YEAR(T.[date]) * 10000) + (MONTH(T.[date]) * 100) + DAY(T.[date]) AS TreatmentDate,
 	INS.Coverage_Percentage,

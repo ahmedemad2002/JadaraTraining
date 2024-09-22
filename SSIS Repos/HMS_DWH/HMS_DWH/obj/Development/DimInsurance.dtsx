@@ -11,8 +11,8 @@
   DTS:LocaleID="3073"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{8AD4033B-5A4F-4F0F-B902-C01B4F62612F}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{9001744A-84CE-49D2-84D1-84A1FC4D1A34}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -302,18 +302,18 @@ where [refTable].[HashCode] = ?</property>
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PolicyNumber]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[policy_number]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[end_date]"
-                      cachedDataType="dbDate"
-                      cachedName="end_date"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndDate]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[end_date]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[HashCode]"
                       cachedDataType="wstr"
                       cachedLength="1000"
                       cachedName="HashCode"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HashCode]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HashCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InsuranceEndDate]"
+                      cachedDataType="i4"
+                      cachedName="InsuranceEndDate"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsuranceEndDate]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsuranceEndDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -364,14 +364,14 @@ where [refTable].[HashCode] = ?</property>
                       length="50"
                       name="PolicyNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndDate]"
-                      dataType="dbDate"
-                      name="EndDate" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HashCode]"
                       dataType="wstr"
                       length="1000"
                       name="HashCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsuranceEndDate]"
+                      dataType="i8"
+                      name="InsuranceEndDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -425,7 +425,10 @@ where [refTable].[HashCode] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT Insurance_ID, company, Coverage_Percentage, policy_number, end_date, HashCode, StartDate, EndDate, RowStatus, IsLatest
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">-- DimInsurance
+SELECT Insurance_ID, company, Coverage_Percentage, policy_number,
+	(YEAR(end_date) * 10000) + (MONTH(end_date) * 100) + DAY(end_date) AS InsuranceEndDate,
+	HashCode, StartDate, EndDate, RowStatus, IsLatest
 FROM Insurance</property>
                 <property
                   dataType="System.String"
@@ -503,15 +506,6 @@ FROM Insurance</property>
                       name="policy_number"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[end_date]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[end_date]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[end_date]"
-                      name="end_date"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HashCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -561,6 +555,15 @@ FROM Insurance</property>
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[IsLatest]"
                       name="IsLatest"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsuranceEndDate]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InsuranceEndDate]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsuranceEndDate]"
+                      name="InsuranceEndDate"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -584,10 +587,6 @@ FROM Insurance</property>
                       dataType="str"
                       length="50"
                       name="policy_number" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[end_date]"
-                      dataType="dbDate"
-                      name="end_date" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HashCode]"
                       dataType="wstr"
@@ -613,6 +612,10 @@ FROM Insurance</property>
                       dataType="str"
                       length="1"
                       name="IsLatest" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InsuranceEndDate]"
+                      dataType="i4"
+                      name="InsuranceEndDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -645,10 +648,10 @@ FROM Insurance</property>
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[policy_number]"
                       name="policy_number" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[end_date]"
-                      dataType="dbDate"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[end_date]"
-                      name="end_date" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsuranceEndDate]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsuranceEndDate]"
+                      name="InsuranceEndDate" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HashCode]"
                       dataType="wstr"
@@ -817,7 +820,7 @@ FROM Insurance</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -827,7 +830,7 @@ FROM Insurance</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
