@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\FactOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\FactInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
@@ -29,6 +25,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimOperation.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|solutionrelative:HMS_DWH\\DimInvoice.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
       "AbsoluteMoniker": "D:0:0:{837EC3DA-6798-413E-A2F6-3B88FA973337}|HMS_DWH\\HMS_DWH.dtproj|E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInsurance.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,19 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DimInvoice.dtsx [Design]",
-              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInvoice.dtsx",
-              "RelativeDocumentMoniker": "HMS_DWH\\DimInvoice.dtsx",
-              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInvoice.dtsx [Design]",
-              "RelativeToolTip": "HMS_DWH\\DimInvoice.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-09-19T22:08:08.96Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "DimPatient.dtsx [Design]",
               "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimPatient.dtsx",
               "RelativeDocumentMoniker": "HMS_DWH\\DimPatient.dtsx",
@@ -82,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "DimPharmacyStorage.dtsx [Design]",
               "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimPharmacyStorage.dtsx",
               "RelativeDocumentMoniker": "HMS_DWH\\DimPharmacyStorage.dtsx",
@@ -94,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FactAttendance.dtsx [Design]",
               "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactAttendance.dtsx",
               "RelativeDocumentMoniker": "HMS_DWH\\FactAttendance.dtsx",
@@ -106,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FactInvoice.dtsx [Design]",
               "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\FactInvoice.dtsx",
               "RelativeDocumentMoniker": "HMS_DWH\\FactInvoice.dtsx",
@@ -130,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "DimOperation.dtsx [Design]",
               "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimOperation.dtsx",
               "RelativeDocumentMoniker": "HMS_DWH\\DimOperation.dtsx",
@@ -138,6 +126,18 @@
               "RelativeToolTip": "HMS_DWH\\DimOperation.dtsx [Design]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
               "WhenOpened": "2024-09-19T20:40:58.988Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DimInvoice.dtsx [Design]",
+              "DocumentMoniker": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInvoice.dtsx",
+              "RelativeDocumentMoniker": "HMS_DWH\\DimInvoice.dtsx",
+              "ToolTip": "E:\\AE\\JadaraTrainingRepo\\JadaraTraining\\SSIS Repos\\HMS_DWH\\HMS_DWH\\DimInvoice.dtsx [Design]",
+              "RelativeToolTip": "HMS_DWH\\DimInvoice.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-09-19T22:08:08.96Z",
               "EditorCaption": " [Design]"
             },
             {
