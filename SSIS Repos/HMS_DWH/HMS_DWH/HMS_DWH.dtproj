@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-FACFGFK</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA5BUwbFvw2kyVOhgMWsDGWAAAAAACAAAAAAAQZgAAAAEAACAAAAARungOclDcXlT6CD03xt+J5UEMXC2kvJdmSQHGHou/ygAAAAAOgAAAAAIAACAAAAD/TUf+9zJ3qUce+Zy2RBT2IhLDIlx7IsKbGJU85GrB85AAAABIreTl745cX4Hp6C9NhTq2h4HsgeMpcXBatm62Y1ikRVvdR3RgFXw43GMkvZRd3nUjEhATGSkFDWrOB2I3qx/B/ujtz3+9nS0f58Ef/GN0k3LB/OZoj5Kqyrpx1vgnhbHXStjwesctH0b6RpxeoRSeuloEczuU5qRlu19jkscCQhiGnDVr2ue2fUHm5xUIBr5AAAAAu/x0mDgi8+pFs9M83C60gNZMhdw1RzkNjpoDIQXGHODrOPGor1NQoQSygcXMbtpBwC+rAHc72X7dLm4GbrcNOA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA5BUwbFvw2kyVOhgMWsDGWAAAAAACAAAAAAAQZgAAAAEAACAAAAD+Fx/NEf1vMVTIfbAF7NDpOe14f4Am+hxuEektZdt/jQAAAAAOgAAAAAIAACAAAACGnlq70FCTZccIUTv4SwtP8RkP/Uij1dom6TjdiETNP5AAAAD9XCzwlCtCBezQqrwJi3RapLBJFKOJUZnJSfjE9myzYR+cHYJxZypwyOTgPb4VRVHc3T+1aHxVwDCFvQF3SyKELtHqlwEZ/cjtQOnDv3C0zkp0eEGNOOF0nLHwyKqmLoczWX+BjdXKBuFd/4hqe2foM6G1uDpTzLDNVjl27uPKOqwNdZ9lXbIRhkXDiqF0grZAAAAA4idoGUqfrF4pIgLPhe2f7dFBGxtvNO83O9H6nU6RKuuQpRPz+t1r4p2gh6KMOdO0k/4ICLft1fk0KSkVKmEXPg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -40,6 +40,7 @@
           <SSIS:Package SSIS:Name="FactOperation.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FactInvoice.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DimPharmacyStorage.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DimLabTest.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="DESKTOP-FACFGFK_MSSQLSERVER01.HMS_Staging.conmgr" />
@@ -508,6 +509,23 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{C4F1A37D-AB8D-46B9-B4E4-AC0A552B0C39}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DimLabTest.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{DEED0620-65FA-4C8E-AB29-5324847DA372}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DimLabTest</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{8E864B50-0645-415C-A9C1-CE0DE5A42968}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

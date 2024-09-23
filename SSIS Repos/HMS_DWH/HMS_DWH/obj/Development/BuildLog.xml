@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>HMS_DWH</Name>
-    <LastWriteTime>2024-09-20T02:06:54.4541293Z</LastWriteTime>
+    <LastWriteTime>2024-09-23T05:28:44.6146507Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -54,6 +54,11 @@
     <ProjectBuildItemInfo>
       <Name>DimPharmacyStorage.dtsx</Name>
       <LastWriteTime>2024-09-22T15:34:38.6701914Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimLabTest.dtsx</Name>
+      <LastWriteTime>2024-09-23T05:28:39.8089078Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

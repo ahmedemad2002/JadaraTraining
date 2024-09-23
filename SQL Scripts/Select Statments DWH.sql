@@ -50,6 +50,11 @@ SELECT T.TreatmentID, PhS.[name], Phs.Quantity AS CurrentQuantity, PhS.MinQuanti
 FROM Treatment T
 LEFT JOIN Pharmacy_storage PhS ON T.Medicine_ID=PhS.Medicine_id AND PHS.IsLatest='Y'
 
+-- DimLabTest
+SELECT *
+FROM Lab_Test
+
+
 -- FactOperation
 SELECT O.ID AS OperationSK, DO.ID AS DOSK, E.ID AS EmpSK, P.ID AS PatientSK, Dept.ID as DeptSK,
 	(YEAR(O.start_time) * 10000) + (MONTH(O.start_time) * 100) + DAY(O.start_time) AS OperationDate,

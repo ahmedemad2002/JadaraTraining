@@ -236,22 +236,22 @@ GO
 
 
 
--- Create the Dim_LabTest table within the Lbt schema
-CREATE TABLE Inv.Dim_LabTest (
-    LabTestBK INT IDENTITY(1,1) PRIMARY KEY -- Surrogate Key (SK)
+-- Create the DimLabTest table within the Lbt schema
+CREATE TABLE Inv.DimLabTest (
+    LabTestSK INT IDENTITY(1,1) PRIMARY KEY -- Surrogate Key (SK)
 );
 GO
--- Add other attributes to the Dim_LabTest table
-ALTER TABLE Inv.Dim_LabTest ADD Lab_test_id INT; -- Foreign key for Lab test ID
-ALTER TABLE Inv.Dim_LabTest ADD test_date DATE; -- Test date
-ALTER TABLE Inv.Dim_LabTest ADD test_result VARCHAR(255); -- Test result
-ALTER TABLE Inv.Dim_LabTest ADD Test_Description VARCHAR(255); -- Test description
-ALTER TABLE Inv.Dim_LabTest ADD test_name VARCHAR(100); -- Test name
-ALTER TABLE Inv.Dim_LabTest ADD HashCode NVARCHAR(1000); -- Hash code for data integrity
-ALTER TABLE Inv.Dim_LabTest ADD ValidFrom DATE;
-ALTER TABLE Inv.Dim_LabTest ADD ValidTo DATE;
-ALTER TABLE Inv.Dim_LabTest ADD RowStatus VARCHAR(1); -- Row status (active/inactive)
-ALTER TABLE Inv.Dim_LabTest ADD IsLatest VARCHAR(1); -- Latest test flag
+-- Add other attributes to the DimLabTest table
+ALTER TABLE Inv.DimLabTest ADD Lab_test_id INT; -- Foreign key for Lab test ID
+ALTER TABLE Inv.DimLabTest ADD test_date DATE; -- Test date
+ALTER TABLE Inv.DimLabTest ADD test_result VARCHAR(255); -- Test result
+ALTER TABLE Inv.DimLabTest ADD Test_Description VARCHAR(255); -- Test description
+ALTER TABLE Inv.DimLabTest ADD test_name VARCHAR(100); -- Test name
+ALTER TABLE Inv.DimLabTest ADD HashCode NVARCHAR(1000); -- Hash code for data integrity
+ALTER TABLE Inv.DimLabTest ADD ValidFrom DATE;
+ALTER TABLE Inv.DimLabTest ADD ValidTo DATE;
+ALTER TABLE Inv.DimLabTest ADD RowStatus VARCHAR(1); -- Row status (active/inactive)
+ALTER TABLE Inv.DimLabTest ADD IsLatest VARCHAR(1); -- Latest test flag
 GO
 
 
@@ -749,7 +749,7 @@ ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INV_FACTINV FOREIGN KEY (InvoiceID
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_INS_FACTINV FOREIGN KEY (InsuranceID) REFERENCES Inv.DimInsurance(InsuranceSK);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_PH_FACTINV FOREIGN KEY (MedicineID) REFERENCES Inv.DimPharmacyStorage(MedicineID);
 ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_OP_FACTINV FOREIGN KEY (OperationID) REFERENCES Shared.DimOperation(OperationSK)
-ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_LAB_FACTINV FOREIGN KEY (LabtestID) REFERENCES Inv.Dim_LabTest(LabTestBK)
+ALTER TABLE INV.FactInvoice ADD CONSTRAINT FK_LAB_FACTINV FOREIGN KEY (LabtestID) REFERENCES Inv.DimLabTest(LabTestSK)
 
 
 GO
