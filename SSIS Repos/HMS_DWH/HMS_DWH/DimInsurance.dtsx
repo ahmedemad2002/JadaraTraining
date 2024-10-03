@@ -11,8 +11,8 @@
   DTS:LocaleID="3073"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{2E793852-AF9E-4470-8075-96CB00BF6E38}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{E232B462-B477-4CD2-97AF-692C2396D098}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -298,7 +298,7 @@ where [refTable].[HashCode] = ?</property>
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[HashCode]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[InsuranceEndDate]"
-                      cachedDataType="i4"
+                      cachedDataType="dbTimeStamp"
                       cachedName="InsuranceEndDate"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsuranceEndDate]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsuranceEndDate]" />
@@ -427,11 +427,19 @@ where [refTable].[HashCode] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">-- DimInsurance
-SELECT Insurance_ID, company, Coverage_Percentage, policy_number,
-	(YEAR(end_date) * 10000) + (MONTH(end_date) * 100) + DAY(end_date) AS InsuranceEndDate,
-	HashCode, StartDate, EndDate, RowStatus, IsLatest
-FROM Insurance</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    Insurance_ID, 
+    company, 
+    Coverage_Percentage, 
+    policy_number,
+    -- Correct casting to DATE from concatenated YEAR, MONTH, DAY
+    CAST(CONCAT(YEAR(end_date), '-', RIGHT('0' + CAST(MONTH(end_date) AS VARCHAR(2)), 2), '-', RIGHT('0' + CAST(DAY(end_date) AS VARCHAR(2)), 2)) AS DATE) AS InsuranceEndDate,
+    HashCode, 
+    StartDate, 
+    EndDate, 
+    RowStatus, 
+    IsLatest
+FROM Insurance;</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -559,7 +567,7 @@ FROM Insurance</property>
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsuranceEndDate]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InsuranceEndDate]"
@@ -616,7 +624,7 @@ FROM Insurance</property>
                       name="IsLatest" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InsuranceEndDate]"
-                      dataType="i4"
+                      dataType="dbDate"
                       name="InsuranceEndDate" />
                   </externalMetadataColumns>
                 </output>
@@ -651,7 +659,7 @@ FROM Insurance</property>
                       name="policy_number" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsuranceEndDate]"
-                      dataType="i4"
+                      dataType="dbDate"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsuranceEndDate]"
                       name="InsuranceEndDate" />
                     <outputColumn
@@ -731,7 +739,7 @@ FROM Insurance</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155,42"
+          Size="155.2,41.6"
           Id="Package\Data Flow Task"
           TopLeft="282,111" />
       </GraphLayout>
@@ -743,31 +751,31 @@ FROM Insurance</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="177,42"
+          Size="176.8,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="261,352" />
         <NodeLayout
-          Size="115,42"
+          Size="115.2,41.6"
           Id="Package\Data Flow Task\Lookup"
           TopLeft="290,192" />
         <NodeLayout
-          Size="157,42"
+          Size="149.6,41.6"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="265,51" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="345.5,93">
+          TopLeft="343.7,92.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,99"
+              EndConnector="0,99.4"
               Start="0,0"
-              End="0,91.5">
+              End="0,91.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,91.5" />
+                    End="0,91.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
