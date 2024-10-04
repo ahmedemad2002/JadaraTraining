@@ -11,8 +11,8 @@
   DTS:LocaleID="3073"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="66"
-  DTS:VersionGUID="{70C13805-7A49-4052-937B-C110080B6C58}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{DD106E4C-6E09-4E82-AE62-4ADA38A9B616}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -536,9 +536,17 @@ where [refTable].[HashCode] = ?</property>
     CONVERT(BIGINT, CONVERT(VARCHAR(8), CAST(ISNULL(PHS.expiration_date, '1900-01-01') AS DATE), 112)) AS MedicineExpirationDate,
     
     -- Assign new alias for Medicine IDs
-    PHS.ID AS MedicineIDs
+    PHS.ID AS MedicineIDs,
+
+    -- Placeholder for DateSK to be used when loading into the DWH
+    NULL AS InvoiceDimDateSK,
+    
+    -- Placeholder for Treatment DateSK to be used when loading into the DWH
+    NULL AS TreatmentDimDateSK
+
 FROM 
     INVOICE INV
+    
     -- Left Join Treatment, ensuring latest record is picked
     LEFT JOIN Treatment T 
         ON T.TreatmentID = INV.TreatmentID 
@@ -887,6 +895,24 @@ FROM
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MedicineIDs]"
                       name="MedicineIDs"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[InvoiceDimDateSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InvoiceDimDateSK]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[InvoiceDimDateSK]"
+                      name="InvoiceDimDateSK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TreatmentDimDateSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TreatmentDimDateSK]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[TreatmentDimDateSK]"
+                      name="TreatmentDimDateSK"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1019,6 +1045,14 @@ FROM
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MedicineIDs]"
                       dataType="i4"
                       name="MedicineIDs" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InvoiceDimDateSK]"
+                      dataType="i4"
+                      name="InvoiceDimDateSK" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TreatmentDimDateSK]"
+                      dataType="i4"
+                      name="TreatmentDimDateSK" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1185,6 +1219,16 @@ FROM
                       dataType="i4"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MedicineIDs]"
                       name="MedicineIDs" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InvoiceDimDateSK]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InvoiceDimDateSK]"
+                      name="InvoiceDimDateSK" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TreatmentDimDateSK]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TreatmentDimDateSK]"
+                      name="TreatmentDimDateSK" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"

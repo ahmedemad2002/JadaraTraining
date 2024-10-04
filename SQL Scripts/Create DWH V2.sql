@@ -108,7 +108,7 @@ ALTER TABLE Inv.FactInvoice ADD OperationID BIGINT
 ALTER TABLE Inv.FactInvoice ADD MedicineID BIGINT
 ALTER TABLE Inv.FactInvoice ADD DepartmentID BIGINT
 ALTER TABLE Inv.FactInvoice ADD PaymentDate DATE
-ALTER TABLE Inv.FactInvoice ADD MedicineExpirationDate DATE
+ALTER TABLE Inv.FactInvoice ADD MedicineExpirationDate BIGINT
 ALTER TABLE Inv.FactInvoice ADD InvoiceAmount Float
 ALTER TABLE Inv.FactInvoice ADD CoveragePercentage INT
 ALTER TABLE Inv.FactInvoice ADD Quantity INT
@@ -270,7 +270,7 @@ GO
 --Value of Start Date Must be Less than Your End Date 
 --=========================================================================================
 
-DECLARE @StartDate DATETIME = '01/01/1920' --Starting value of Date Range
+DECLARE @StartDate DATETIME = '01/01/1900' --Starting value of Date Range
 DECLARE @EndDate DATETIME = '01/01/2100' --End Value of Date Range
 
 --Temporary Variables To Hold the Values During Processing of Each Date of Year
