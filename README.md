@@ -176,34 +176,25 @@ It represents a real-world end-to-end Data Engineering solution.
 ## 📂 Repository Structure
 
 ```
-├── /sql
-│   ├── create_tables.sql
-│   ├── bulk_insert_scripts.sql
-│
-├── /python-fake-data
-│   ├── fake_data_generator.py
-│   └── generated_csvs/
-│
-├── /ssis-packages
-│   ├── extract.dtsx
-│   ├── transform.dtsx
-│   └── load.dtsx
-│
-├── /dwh
-│   ├── dim_tables.sql
-│   ├── fact_tables.sql
-│   └── analytical_queries.sql
-```
+├── Dummy Data/
+│   └── … (CSV files)
+├── SQL Scripts/
+│   └── … (creation scripts, staging scripts)
+├── SSIS Repos/
+│   └── … (ETL packages)
+├── .gitattributes
+├── README.md
+
 
 ---
 
 ## 📬 Contact
-
 If you'd like to discuss this project or need help with data engineering topics:
 **Ahmed Emad** — Data Engineer
 
 ---
 
 ## ⭐ Like This Project?
-
 Feel free to fork, clone, or star the repository!
+
+```
