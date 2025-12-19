@@ -38,21 +38,35 @@ Contains cleaned and transformed data, structured to support downstream analytic
 ## Repository Structure
 
 ├── SQL Scripts
+
 │ ├── source_db_creation.sql
+
 │ ├── landing_db_creation.sql
+
 │ └── staging_db_creation.sql
+
 │
 ├── Dummy Data
+
 │ ├── employees.csv
+
 │ ├── doctors.csv
+
 │ ├── nurses.csv
+
 │ ├── departments.csv
+
 │ ├── appointments.csv
+
 │ ├── rooms.csv
+
 │ └── attendance.csv
+
 │
 └── SSIS Repos
+
 ├── source_to_landing.dtsx
+
 └── landing_to_staging.dtsx
 
 ---
