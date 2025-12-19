@@ -1,83 +1,81 @@
-# Hospital Management System - DB and ETL Project
+# Hospital Management System — Data Engineering Pipeline
 
-## Project Overview
+## Overview
 
-This project is a database and ETL (Extract, Transform, Load) implementation for a Hospital Management System. It includes the creation of a source database to store hospital data, landing and staging databases for ETL processes, and SSIS (SQL Server Integration Services) projects to handle the movement of data between these layers.
+This project implements an end-to-end **batch data engineering pipeline** for a Hospital Management System. It simulates a production-style environment by separating concerns across **Operational (Source)**, **Landing**, and **Staging** layers, and uses **SSIS** to orchestrate reliable data movement and transformation.
 
-The project is divided into three main components:
-- **SQL Scripts**: Scripts for creating the source, landing, and staging databases.
-- **Dummy Data**: CSV files containing the dummy data to be inserted into the source database.
-- **SSIS Repos**: SSIS projects that handle the ETL process between the landing and staging databases.
+The goal of this project is to demonstrate **database design**, **ETL layering**, and **warehouse-ready data preparation** using enterprise tools and best practices.
 
-## Project Structure
+---
+
+## Architecture
+
+**Source Database (OLTP)**  
+A relational operational database designed in **SQL Server** to store hospital entities such as employees, departments, doctors, nurses, appointments, rooms, and attendance records.
+
+**Landing Layer**  
+Acts as a raw ingestion layer. Data is extracted from the source database and loaded with minimal transformation to preserve the original structure and ensure traceability.
+
+**Staging Layer**  
+Contains cleaned and transformed data, structured to support downstream analytics and future loading into a dimensional data warehouse.
+
+**ETL Orchestration**  
+**SSIS packages** manage data movement between layers, enforcing schema consistency and transformation logic.
+
+---
+
+## Key Engineering Features
+
+- Relational database design using **Microsoft SQL Server**
+- Clear separation between **Source**, **Landing**, and **Staging** layers
+- **Bulk data ingestion** using CSV files to simulate production-scale loads
+- **SSIS-based ETL pipelines** for controlled extraction and transformation
+- Incremental-ready design using **hash-based change detection**
+- Warehouse-oriented modeling approach (fact/dimension ready)
+
+---
+
+## Repository Structure
+
 ├── SQL Scripts
-
-│   ├── source_db_creation.sql
-
-│   ├── landing_db_creation.sql
-
-│   └── staging_db_creation.sql
-
+│ ├── source_db_creation.sql
+│ ├── landing_db_creation.sql
+│ └── staging_db_creation.sql
 │
-
 ├── Dummy Data
-
-│   ├── employees.csv
-
-│   ├── doctors.csv
-
-│   ├── nurses.csv
-
-│   ├── departments.csv
-
-│   ├── appointments.csv
-
-│   ├── rooms.csv
-
-│   └── attendance.csv
-
+│ ├── employees.csv
+│ ├── doctors.csv
+│ ├── nurses.csv
+│ ├── departments.csv
+│ ├── appointments.csv
+│ ├── rooms.csv
+│ └── attendance.csv
 │
-
 └── SSIS Repos
+├── source_to_landing.dtsx
+└── landing_to_staging.dtsx
 
-    ├── landing_to_staging.dtsx
+---
 
-    └── source_to_landing.dtsx
+## Data Generation
 
+Synthetic data is generated using **Python (Faker)** and exported as CSV files.  
+The data is intentionally realistic to validate schema design, constraints, and ETL behavior under non-trivial volumes.
 
-## Components Description
-
-### 1. SQL Scripts
-This folder contains SQL scripts to create the following databases:
-- **Source DB**: This is the main operational database that stores all the hospital data such as employee details, department information, patient appointments, etc.
-- **Landing DB**: A temporary storage area where raw data is initially landed before processing.
-- **Staging DB**: A cleaned and transformed version of the data before it's loaded into the final reporting or analytics environment.
-
-### 2. Dummy Data
-This folder contains CSV files with dummy data generated using Python's `Faker` library. These files are to be bulk inserted into the Source DB. Each CSV file corresponds to a table in the source database, such as:
-- `employees.csv`
-- `doctors.csv`
-- `nurses.csv`
-- `departments.csv`
-- `appointments.csv`
-- `rooms.csv`
-- `attendance.csv`
-
-### 3. SSIS Repos
-This folder contains SSIS packages for the ETL process:
-- **source_to_landing.dtsx**: Extracts data from the Source DB and loads it into the Landing DB.
-- **landing_to_staging.dtsx**: Transforms data from the Landing DB and loads it into the Staging DB.
-
-## How to Use
-
-1. **Setup the Databases**: Run the SQL scripts in the `SQL Scripts` folder to create the Source, Landing, and Staging databases.
-2. **Insert Dummy Data**: Use bulk insert or other import tools to insert the data from the `Dummy Data` CSV files into the Source DB.
-3. **ETL Process**: Execute the SSIS packages to perform the ETL steps:
-    - Run `source_to_landing.dtsx` to move data from the Source DB to the Landing DB.
-    - Run `landing_to_staging.dtsx` to clean and transform the data before loading it into the Staging DB.
+---
 
 ## Technologies Used
-- **SQL Server**: For database creation and management.
-- **SSIS (SQL Server Integration Services)**: For the ETL process.
-- **Python (Faker)**: To generate dummy data for testing.
-  
+
+- **Microsoft SQL Server** — database design and management  
+- **SSIS (SQL Server Integration Services)** — ETL orchestration  
+- **Python (Faker)** — synthetic data generation  
+
+---
+
+## What This Project Demonstrates
+
+- Designing data systems using **layered architecture**
+- Translating business entities into relational schemas
+- Building **reliable batch ETL pipelines**
+- Preparing data for analytical and warehouse use
+- Applying enterprise data engineering practices with Microsoft tooling
